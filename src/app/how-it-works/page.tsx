@@ -1,35 +1,35 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Check, ArrowRight, Zap, ShieldCheck, Sparkles, X } from "lucide-react";
 import Header from "@/components/Header";
+import { motion } from "framer-motion";
+import { Sparkles, Zap, Mail, Camera, Box, Layers, RefreshCcw } from "lucide-react";
 
 export default function HowItWorks() {
   const steps = [
     {
       id: "01",
-      title: "Select Your Aesthetic",
-      description: "Browse the StyleVault pillars. Whether you need the organic soft light of 'The Botanical' or the brutalist stone shadows of 'The Monolith', choose the scene that fits your brand identity.",
-      icon: <Sparkles className="text-accent" size={24} />
+      title: "OPEN GEMINI",
+      description: "Open Google Gemini. Ensure you are logged in and using a multimodal-capable account.",
+      icon: <Camera className="text-accent" size={24} />
     },
     {
       id: "02",
-      title: "Copy the Pillar Prompt",
-      description: "Unlike generic prompts, ours are studio-tuned for specific product geometries. Copy the logic directly from the Vault.",
-      icon: <Zap className="text-accent" size={24} />
+      title: "COPY THE PROMPT",
+      description: "Copy the studio-tuned logic block from ProductPic.pro and paste it into the Gemini chat box.",
+      icon: <Layers className="text-accent" size={24} />
     },
     {
       id: "03",
-      title: "Upload & Configure",
-      description: "Open your AI tool (Gemini or Midjourney), upload your raw product photo, and paste the prompt. The AI uses our scene logic to wrap your product in premium lighting.",
-      icon: <ArrowRight className="text-accent" size={24} />
+      title: "UPLOAD & CONFIGURE",
+      description: "Upload your raw product photo. For best results, also upload the StyleVault reference photo from this site to 'anchor' the lighting.",
+      note: "Make sure you're on 'Thinking' or 'Pro' mode and click 'Create Images'.",
+      icon: <Box className="text-accent" size={24} />
     },
     {
       id: "04",
-      title: "Export Studio Results",
-      description: "Get high-resolution, studio-grade product photography in seconds. Ready for your Shopify store, Instagram, or ad creatives.",
-      icon: <Check className="text-accent" size={24} />
+      title: "ENJOY & EDIT",
+      description: "Enjoy your studio-grade render. Use the Gemini edit button to refine the prompt if you need a different background or color.",
+      icon: <RefreshCcw className="text-accent" size={24} />
     }
   ];
 
@@ -37,103 +37,126 @@ export default function HowItWorks() {
     <div className="font-sans antialiased min-h-screen flex flex-col selection:bg-accent selection:text-black w-full h-full bg-background text-textMain">
       <Header />
 
-      <main className="max-w-[1200px] mx-auto px-6 py-20">
-        <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter">
-            How it <span className="text-textMuted font-light">Works.</span>
+      <main className="max-w-[1000px] mx-auto px-6 py-20">
+        {/* Concept */}
+        <section className="mb-24">
+          <h2 className="text-[10px] uppercase tracking-[0.3em] text-accent mb-4 font-bold">The Concept</h2>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter max-w-2xl leading-[1.1]">
+            Curated Studio Lighting <br/>
+            <span className="text-textMuted font-light">for AI-Native Operators.</span>
           </h1>
-          <p className="text-textMuted text-xl max-w-2xl mx-auto font-light">
-            Go from a raw smartphone photo to studio-grade editorial photography in under 60 seconds.
+          <p className="text-textMuted text-lg leading-relaxed max-w-3xl font-light">
+            ProductPic.pro is a curated library of premium AI prompts focused on **DTC Product Photography**. We capture high-end architectural shadows, organic wellness lighting, and aggressive hard-flash aesthetics. Members unlock the exact prompt and lighting geometry used to build every shot.
           </p>
-        </div>
+        </section>
 
-        {/* Steps Grid */}
-        <div className="grid md:grid-cols-2 gap-12 mb-32">
-          {steps.map((step, idx) => (
-            <motion.div 
-              key={step.id}
-              initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0.1 }}
-              className="p-8 rounded-3xl bg-surface border border-borderSubtle relative group"
-            >
-              <div className="text-5xl font-mono text-white/5 absolute top-6 right-8 group-hover:text-accent/10 transition-colors">
-                {step.id}
-              </div>
-              <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
-                {step.icon}
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-textMain">{step.title}</h3>
-              <p className="text-textMuted leading-relaxed font-light">
-                {step.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Concept Section */}
+        {/* How to Generate */}
         <section className="mb-32">
-          <div className="p-12 rounded-[40px] bg-accent/5 border border-accent/10 relative overflow-hidden">
-             <div className="relative z-10 max-w-3xl">
-                <h2 className="text-3xl font-bold mb-6 text-textMain">The "Pillar" Concept</h2>
-                <p className="text-textMuted text-lg leading-relaxed mb-8 font-light">
-                  Most AI prompts fail because they don't understand how light interacts with specific materials. Our **Aesthetic Pillars** are engineered with "Spatial Logic"—pre-tuned tokens for **Refraction, Rim Lighting, and Caustics**. We don't just describe a scene; we define the physics of the environment.
-                </p>
-                <div className="flex flex-wrap gap-8">
-                   <div className="flex items-center gap-2 text-sm text-accent">
-                      <ShieldCheck size={18} />
-                      <span>Volumetric Shadow Logic</span>
-                   </div>
-                   <div className="flex items-center gap-2 text-sm text-accent">
-                      <ShieldCheck size={18} />
-                      <span>High-Dynamic Range (HDR) Rim Lighting</span>
-                   </div>
-                   <div className="flex items-center gap-2 text-sm text-accent">
-                      <ShieldCheck size={18} />
-                      <span>Preserved Surface Integrity</span>
-                   </div>
+          <div className="flex items-center gap-4 mb-12">
+            <h2 className="text-[10px] uppercase tracking-[0.3em] text-accent font-bold">How to Generate</h2>
+            <div className="h-px flex-grow bg-borderSubtle"></div>
+            <span className="text-[10px] text-textMuted font-mono">DESKTOP & MOBILE</span>
+          </div>
+
+          <div className="grid gap-12">
+            {steps.map((step) => (
+              <div key={step.id} className="flex flex-col md:flex-row gap-8 items-start group">
+                <div className="flex-shrink-0">
+                  <span className="text-5xl font-mono font-bold text-white/5 group-hover:text-accent/20 transition-colors">
+                    {step.id}
+                  </span>
                 </div>
-             </div>
-             <div className="absolute right-[-10%] top-[-10%] text-[200px] font-bold text-accent/[0.03] select-none pointer-events-none">
-                PILLAR
-             </div>
+                <div className="flex-grow p-8 rounded-3xl bg-surface border border-borderSubtle group-hover:border-accent/30 transition-all shadow-2xl shadow-black/50">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                    {step.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 tracking-tight">{step.title}</h3>
+                  <p className="text-textMuted leading-relaxed font-light mb-4">
+                    {step.description}
+                  </p>
+                  {step.note && (
+                    <div className="p-4 rounded-xl bg-background/50 border border-white/5 text-xs text-accent font-mono italic">
+                      Note: {step.note}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Tips Section */}
-        <div className="max-w-3xl mx-auto mb-20">
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-3 text-textMain">
-            <Zap className="text-accent" /> Gemini & Midjourney Pro-Tips
-          </h2>
-          <div className="space-y-8 text-textMuted font-light leading-relaxed">
-            <div className="border-l-2 border-accent/30 pl-6">
-              <strong className="text-textMain block mb-2 font-medium">1. For Gemini 2.0 Users (Visual Reasoning)</strong>
-              <p>Upload the <strong>Reference Image</strong> (the 'After' render) along with your product photo. Gemini 2.0's multimodal reasoning will 'anchor' the lighting from the reference directly onto your product's specific geometry.</p>
-            </div>
-            
-            <div className="border-l-2 border-accent/30 pl-6">
-              <strong className="text-textMain block mb-2 font-medium">2. For Midjourney Users (Style Reference)</strong>
-              <p>Use the <code className="text-accent bg-accent/5 px-1.5 py-0.5 rounded text-xs">--sref [URL]</code> parameter with the Reference Image link. Set <code className="text-accent bg-accent/5 px-1.5 py-0.5 rounded text-xs">--sw 100</code> to ensure the aesthetic transfers perfectly without altering your product's shape.</p>
+        {/* Things to Keep in Mind */}
+        <section className="mb-32 border-t border-borderSubtle pt-24">
+          <h2 className="text-[10px] uppercase tracking-[0.3em] text-accent mb-12 font-bold">Things to Keep in Mind</h2>
+          
+          <div className="grid md:grid-cols-2 gap-16">
+            <div>
+              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Sparkles size={18} className="text-accent" /> Model Updates
+              </h3>
+              <p className="text-textMuted text-sm font-light leading-relaxed">
+                Gemini updates their models frequently. As of March 2026, the engine is using <strong>Nano Banana 2</strong>. Our prompts are tuned for this specific version to ensure rim lighting and caustic physics remain consistent.
+              </p>
             </div>
 
-            <div className="border-l-2 border-accent/30 pl-6">
-              <strong className="text-textMain block mb-2 font-medium">3. Controlling "Hallucination"</strong>
-              <p>If the AI adds extra caps or labels, use the prompt anchor: <code className="text-accent italic">"strictly maintain the silhouette and label structure of the source image"</code>. This acts as a spatial constraint for the model.</p>
+            <div>
+              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Zap size={18} className="text-accent" /> Inspiration, Not Duplication
+              </h3>
+              <p className="text-textMuted text-sm font-light leading-relaxed">
+                AI results are probabilistic. The images on this site are the "target aesthetic." While your result will follow the lighting logic, it is inspired by, not a direct copy of, the reference.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Box size={18} className="text-accent" /> Daily Usage Limits
+              </h3>
+              <p className="text-textMuted text-sm font-light leading-relaxed">
+                Google limits high-quality multimodal generations per 24-hour cycle:
+                <br /><br />
+                • Pro Users: ~20-40 images.<br />
+                • Free Users: ~5-15 images.<br /><br />
+                If quality suddenly drops or images become "flat," you have hit your daily limit.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Camera size={18} className="text-accent" /> Source Product Photos
+              </h3>
+              <div className="text-textMuted text-sm font-light leading-relaxed space-y-2">
+                <p>For studio-grade results, your upload should be:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Well lit (Neutral, flat lighting is best)</li>
+                  <li>Centered (Product should be the focus)</li>
+                  <li>Clean (No extra clutter in the background)</li>
+                  <li>Alone (Just the product you want to render)</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Contact */}
+        <section className="text-center p-16 rounded-[40px] bg-surface border border-borderSubtle shadow-2xl">
+          <h2 className="text-2xl font-bold mb-4 tracking-tight">Need to get in touch?</h2>
+          <p className="text-textMuted mb-8 font-light italic">Have questions about a specific pillar or custom enterprise prompt engineering?</p>
+          <div className="flex items-center justify-center gap-3 group cursor-pointer">
+            <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-background transition-all">
+              <Mail size={18} />
+            </div>
+            <span className="font-mono text-lg text-accent border-b border-accent/20 group-hover:border-accent transition-all">
+              PROMPTMVSTR@GMAIL.COM
+            </span>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
       <footer className="w-full border-t border-borderSubtle bg-surface mt-auto">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-accent/20 flex items-center justify-center text-accent">
-              <i className="ri-camera-lens-fill text-sm"></i>
-            </div>
-            <span className="font-medium text-lg text-textMain tracking-tight">ProductPic.pro</span>
-          </div>
-          <p className="text-textMuted text-sm font-light">© 2024 ProductPic.pro. All rights reserved.</p>
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-textMuted text-sm font-light">
+          <p>© 2024 ProductPic.pro. All rights reserved.</p>
         </div>
       </footer>
     </div>

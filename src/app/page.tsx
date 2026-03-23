@@ -139,12 +139,12 @@ export default function Home() {
                 <img 
                   src={style.afterImage} 
                   alt={style.name}
-                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                  className="relative z-10 object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                 />
 
                 {/* Lock Overlay for non-free prompts */}
                 {(!style.isFree && !hasAccess) && (
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-10 backdrop-blur-[2px] pointer-events-none">
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-20 backdrop-blur-[2px] pointer-events-none">
                     <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                       <i className="ri-lock-2-fill text-accent text-2xl drop-shadow-[0_0_8px_rgba(210,180,140,0.5)]"></i>
                     </div>
@@ -154,7 +154,7 @@ export default function Home() {
                 
                 {/* Free label */}
                 {style.isFree && (
-                  <div className="absolute top-4 right-4 z-20">
+                  <div className="absolute top-4 right-4 z-30">
                     <span className="bg-green-500/20 text-green-400 text-[10px] px-2 py-1 rounded border border-green-500/30 font-bold uppercase tracking-wider backdrop-blur-sm">Free</span>
                   </div>
                 )}
@@ -217,10 +217,10 @@ export default function Home() {
             >
               {/* Image Side */}
               <div className="md:w-1/2 aspect-square relative bg-background flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
-                <img src={selectedStyle.afterImage} className="object-contain w-full h-full" alt={selectedStyle.name} />
+                <img src={selectedStyle.afterImage} className="relative z-10 object-contain w-full h-full" alt={selectedStyle.name} />
                 <button 
                   onClick={() => setSelectedStyle(null)}
-                  className="absolute top-4 right-4 md:hidden p-2 bg-black/50 backdrop-blur-md rounded-full text-white"
+                  className="absolute top-4 right-4 md:hidden p-2 bg-black/50 backdrop-blur-md rounded-full text-white z-20"
                 >
                   <X size={20} />
                 </button>
@@ -279,22 +279,18 @@ export default function Home() {
                             <Lock className="mx-auto mb-3 text-accent" size={24} />
                             <p className="font-bold mb-1 text-textMain">MEMBERS ONLY</p>
                             <p className="text-xs text-textMuted mb-4">Join to unlock the full vault.</p>
-                            <button className="w-full bg-accent text-background font-bold py-2.5 px-6 rounded-lg text-xs hover:bg-accent-hover transition-all">
+                            <a 
+                              href="https://checkout.dodopayments.com/buy/pdt_0Nb6DxNGX1dZxvAqv6u9o?quantity=1"
+                              target="_blank"
+                              className="block w-full bg-accent text-background text-center font-bold py-2.5 px-6 rounded-lg text-xs hover:bg-accent-hover transition-all"
+                            >
                               Unlock Vault — $29
-                            </button>
+                            </a>
                           </div>
                         </div>
                       )}
                     </div>
                   </div>
-                </div>
-
-                <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between text-textMuted text-[11px] uppercase tracking-widest font-medium">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                    Verified Studio Prompt
-                  </div>
-                  <span>v1.2 Stable</span>
                 </div>
               </div>
             </motion.div>
