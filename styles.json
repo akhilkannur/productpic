@@ -648,5 +648,105 @@
     "beforeImage": "/library/dusk-purple-indigo-bottle/before.png",
     "afterImage": "/library/dusk-purple-indigo-bottle/after.png",
     "isFree": false
+  },
+  {
+    "id": "cyber-neon-pink-blue-can",
+    "name": "Pink & Blue Cyber Can",
+    "pillar": "The Cyber-Neon (High-Contrast)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: High-contrast dual-tone lighting. Vibrant neon pink rim-lighting from the left, electric blue key-lighting from the right.\n[BACKGROUND]: A solid, midnight-black matte background (#000000).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Cyberpunk, high-energy, nightlife editorial.",
+    "beforeImage": "/library/cyber-neon-pink-blue-can/before.png",
+    "afterImage": "/library/cyber-neon-pink-blue-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "soft-focus-dreamscape-bottle",
+    "name": "Dreamscape Soft-Focus Bottle",
+    "pillar": "The Soft-Focus (Dreamscape)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Ultra-soft, high-key white wash. Extremely diffused light with zero visible shadow edges. A slight 'bloom' effect on the product edges.\n[BACKGROUND]: A pure white silk-textured background with soft, out-of-focus fabric ripples.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Pure, ethereal, high-end beauty.",
+    "beforeImage": "/library/soft-focus-dreamscape-bottle/before.png",
+    "afterImage": "/library/soft-focus-dreamscape-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "volumetric-fog-pouch",
+    "name": "Atmospheric Volumetric Pouch",
+    "pillar": "The Volumetric (Atmosphere)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Single 'God-ray' light beam cutting through a heavy, hazy atmosphere (volumetric lighting).\n[BACKGROUND]: A dark, moody charcoal-gray setting with visible dust particles in the light beam.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Cinematic, dramatic, high-performance.",
+    "beforeImage": "/library/volumetric-fog-pouch/before.png",
+    "afterImage": "/library/volumetric-fog-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "solar-flare-direct-can",
+    "name": "Direct Solar-Flare Can",
+    "pillar": "The Solar-Flare (Direct)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Harsh, direct overhead sunlight. A realistic horizontal anamorphic lens flare cutting across the top third of the product.\n[BACKGROUND]: A solid, warm-sand matte background (#C2B280).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Summer, high-noon, refreshing.",
+    "beforeImage": "/library/solar-flare-direct-can/before.png",
+    "afterImage": "/library/solar-flare-direct-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-window-shadow-jar",
+    "name": "Geometric Window Shadow Jar",
+    "pillar": "The Monolith (Architectural)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Sharp morning sun passing through a repeating geometric window frame (slatted shadows).\n[BACKGROUND]: A clean, light-beige plaster wall (#F5F5DC).\n[SHADOW]: Long, repeating horizontal shadows stretching across the jar and the floor.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/monolith-window-shadow-jar/before.png",
+    "afterImage": "/library/monolith-window-shadow-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "liquid-metal-mercury-bottle",
+    "name": "Mercury Liquid-Metal Bottle",
+    "pillar": "The Liquid-Metal (Reflective)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing in the center of a shallow pool of liquid mercury.\n[LIGHTING]: High-key studio lighting reflecting perfectly in the metallic liquid surface.\n[BACKGROUND]: A solid, dark slate matte background (#2F4F4F).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/liquid-metal-mercury-bottle/before.png",
+    "afterImage": "/library/liquid-metal-mercury-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "dark-prism-rainbow-jar",
+    "name": "Dark Prism Rainbow Jar",
+    "pillar": "The Dark-Prism (Refractive)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: A single rainbow-colored light refraction (prism effect) hitting the face of the jar at a 45-degree angle.\n[BACKGROUND]: A pitch-black velvet background (#050505).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/dark-prism-rainbow-jar/before.png",
+    "afterImage": "/library/dark-prism-rainbow-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "studio-softbox-commercial-pouch",
+    "name": "Commercial Softbox Pouch",
+    "pillar": "The Studio-Softbox (Commercial)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Classic 3-point studio lighting. Large rectangular softbox reflections visible on the product surface. Perfectly even fill light.\n[BACKGROUND]: A seamless, light-gray gradient background (#E0E0E0 to #FFFFFF).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/studio-softbox-commercial-pouch/before.png",
+    "afterImage": "/library/studio-softbox-commercial-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "moonlight-silver-can",
+    "name": "Silver Moonlight Can",
+    "pillar": "The Moonlight (Silver)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Cold, silver-toned moonlight from high above. Deep, midnight-blue shadows.\n[BACKGROUND]: A dark, textured stone surface under a night sky.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Mystical, premium, nocturnal.",
+    "beforeImage": "/library/moonlight-silver-can/before.png",
+    "afterImage": "/library/moonlight-silver-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "obsidian-pool-reflection-bottle",
+    "name": "Obsidian Pool Reflection Bottle",
+    "pillar": "The Obsidian-Pool (Reflection)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a black mirror surface. A subtle, circular water ripple emanating from the base.\n[LIGHTING]: Soft rim-lighting that reflects in the dark water.\n[BACKGROUND]: A solid, obsidian-black matte background (#0A0A0A).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/obsidian-pool-reflection-bottle/before.png",
+    "afterImage": "/library/obsidian-pool-reflection-bottle/after.png",
+    "isFree": false
   }
 ]
