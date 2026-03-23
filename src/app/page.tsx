@@ -1,26 +1,64 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import stylesData from "../../styles.json";
+import { supabase } from "@/lib/supabase";
 import { Lock, Copy, Check, Eye } from "lucide-react";
 
 export default function Home() {
   const [filter, setFilter] = useState("All");
   const [selectedStyle, setSelectedStyle] = useState<any>(null);
   const [copied, setCopied] = useState(false);
+  const [styles, setStyles] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const pillars = ["All", ...Array.from(new Set(stylesData.map((s) => s.pillar)))];
+  useEffect(() => {
+    async function fetchStyles() {
+      const { data, error } = await supabase
+        .from("styles")
+        .select("*")
+        .order("created_at", { ascending: true });
+
+      if (error) {
+        console.error("Error fetching styles:", error);
+      } else {
+        // Map database snake_case to camelCase for the frontend
+        const mappedData = data.map((item: any) => ({
+          id: item.id,
+          name: item.name,
+          pillar: item.pillar,
+          category: item.category,
+          prompt: item.prompt,
+          beforeImage: item.before_image,
+          afterImage: item.after_image,
+          isFree: item.is_free,
+        }));
+        setStyles(mappedData);
+      }
+      setLoading(false);
+    }
+    fetchStyles();
+  }, []);
+
+  const pillars = ["All", ...Array.from(new Set(styles.map((s) => s.pillar)))];
 
   const filteredStyles = filter === "All" 
-    ? stylesData 
-    : stylesData.filter((s) => s.pillar === filter);
+    ? styles 
+    : styles.filter((s) => s.pillar === filter);
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="w-8 h-8 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-background text-foreground px-6 py-12">
