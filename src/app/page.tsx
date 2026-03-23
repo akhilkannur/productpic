@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { supabase } from "@/lib/supabase";
-import { Lock, Copy, Check, Eye, X } from "lucide-react";
+import { Lock, Copy, Check, Eye, X, Sparkles } from "lucide-react";
+import Header from "@/components/Header";
 
 export default function Home() {
   const [filter, setFilter] = useState("All");
@@ -11,10 +13,28 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
   const [styles, setStyles] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [hasAccess, setHasAccess] = useState(false);
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    async function fetchStyles() {
-      const { data, error } = await supabase
+    async function fetchData() {
+      // 1. Get User Session
+      const { data: { session } } = await supabase.auth.getSession();
+      setUser(session?.user ?? null);
+
+      if (session?.user) {
+        // 2. Check Profile Access
+        const { data: profile } = await supabase
+          .from('profiles')
+          .select('has_access')
+          .eq('id', session.user.id)
+          .single();
+        
+        setHasAccess(!!profile?.has_access);
+      }
+
+      // 3. Get Styles
+      const { data: stylesData, error } = await supabase
         .from("styles")
         .select("*")
         .order("created_at", { ascending: true });
@@ -22,7 +42,7 @@ export default function Home() {
       if (error) {
         console.error("Error fetching styles:", error);
       } else {
-        const mappedData = data.map((item: any) => ({
+        const mappedData = stylesData.map((item: any) => ({
           id: item.id,
           name: item.name,
           pillar: item.pillar,
@@ -36,7 +56,7 @@ export default function Home() {
       }
       setLoading(false);
     }
-    fetchStyles();
+    fetchData();
   }, []);
 
   const pillars = ["All", ...Array.from(new Set(styles.map((s) => s.pillar)))];
@@ -61,33 +81,7 @@ export default function Home() {
 
   return (
     <div className="font-sans antialiased min-h-screen flex flex-col selection:bg-accent selection:text-black w-full h-full">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-borderSubtle bg-background/80 backdrop-blur-xl">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer group">
-            <div className="w-8 h-8 rounded bg-accent flex items-center justify-center text-background">
-              <i className="ri-camera-lens-fill text-xl"></i>
-            </div>
-            <span className="font-bold text-2xl tracking-tight text-textMain group-hover:opacity-80 transition-opacity">
-              ProductPic<span className="text-accent">.pro</span>
-            </span>
-          </div>
-          
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-textMuted">
-            <a href="#" className="text-textMain hover:text-accent transition-colors">Gallery</a>
-            <a href="#" className="hover:text-textMain transition-colors">Prompt Guide</a>
-            <a href="#" className="hover:text-textMain transition-colors">Pricing</a>
-            <a href="#" className="hover:text-textMain transition-colors">Enterprise</a>
-          </nav>
-
-          <div className="flex items-center gap-5">
-            <a href="#" className="text-sm font-medium text-textMuted hover:text-textMain transition-colors hidden sm:block">Sign In</a>
-            <a href="#" className="bg-accent text-background px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-accent-hover transition-colors shadow-[0_0_15px_rgba(210,180,140,0.15)]">
-              Get Access
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-16 pb-10 w-full">
@@ -149,8 +143,8 @@ export default function Home() {
                 />
 
                 {/* Lock Overlay for non-free prompts */}
-                {!style.isFree && (
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-10 backdrop-blur-[2px] pointer-events-none">
+                {(!style.isFree && !hasAccess) && (
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-10 backdrop-blur-[2px] pointer-events-none">
                     <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                       <i className="ri-lock-2-fill text-accent text-2xl drop-shadow-[0_0_8px_rgba(210,180,140,0.5)]"></i>
                     </div>
@@ -176,6 +170,11 @@ export default function Home() {
                 <h3 className="text-textMain font-medium text-base leading-snug group-hover:text-accent transition-colors duration-300">
                   {style.name}
                 </h3>
+                {!style.isFree && hasAccess && (
+                   <div className="mt-2 flex items-center gap-1 text-[9px] text-accent/50 uppercase font-bold tracking-widest">
+                      <i className="ri-shield-check-line text-xs" /> UNLOCKED
+                   </div>
+                )}
               </div>
             </motion.div>
           ))}
@@ -219,7 +218,6 @@ export default function Home() {
               {/* Image Side */}
               <div className="md:w-1/2 aspect-square relative bg-background flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
                 <img src={selectedStyle.afterImage} className="object-contain w-full h-full" alt={selectedStyle.name} />
-                <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest border border-white/10 uppercase">Render</div>
                 <button 
                   onClick={() => setSelectedStyle(null)}
                   className="absolute top-4 right-4 md:hidden p-2 bg-black/50 backdrop-blur-md rounded-full text-white"
@@ -249,7 +247,7 @@ export default function Home() {
                     <div className="p-6 rounded-2xl bg-black/40 border border-white/5 relative group">
                       <div className="flex justify-between items-center mb-4">
                         <span className="text-[10px] font-bold tracking-widest uppercase text-textMuted">The AI Prompt</span>
-                        {selectedStyle.isFree && (
+                        {(selectedStyle.isFree || hasAccess) && (
                           <button 
                             onClick={() => handleCopy(selectedStyle.prompt)}
                             className="flex items-center gap-2 text-xs text-accent hover:text-white transition-colors"
@@ -259,11 +257,23 @@ export default function Home() {
                           </button>
                         )}
                       </div>
-                      <div className={`text-sm leading-relaxed font-mono ${!selectedStyle.isFree ? "filter blur-sm select-none" : "text-textMain"}`}>
+                      <div className={`text-sm leading-relaxed font-mono ${(!selectedStyle.isFree && !hasAccess) ? "filter blur-sm select-none" : "text-textMain"}`}>
                         {selectedStyle.prompt}
                       </div>
+
+                      {(selectedStyle.isFree || hasAccess) && (
+                        <div className="mt-6 p-4 rounded-xl bg-accent/5 border border-accent/10 flex items-start gap-3">
+                          <div className="mt-0.5 text-accent">
+                            <Sparkles size={16} />
+                          </div>
+                          <div className="text-[11px] leading-relaxed text-textMuted uppercase tracking-wider font-medium">
+                            <span className="text-accent">Gemini/Midjourney Pro Tip:</span> Using the reference photo above as a **Multimodal Anchor** (Gemini 2.0) or an **--sref** (Midjourney) will drastically improve lighting and shadow physics. 
+                            <span className="block mt-1 opacity-60 text-[9px] italic">AI results are probabilistic. These prompts are tuned for studio-grade realism but results depend on the quality of your source upload.</span>
+                          </div>
+                        </div>
+                      )}
                       
-                      {!selectedStyle.isFree && (
+                      {(!selectedStyle.isFree && !hasAccess) && (
                         <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
                           <div className="text-center p-6 bg-surface/80 border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl">
                             <Lock className="mx-auto mb-3 text-accent" size={24} />
@@ -279,19 +289,12 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-white/5 flex gap-4">
-                   <div className="flex-1 text-center">
-                      <p className="text-[10px] text-textMuted uppercase font-bold mb-1 tracking-wider">Stability</p>
-                      <p className="text-xs text-textMain">High</p>
-                   </div>
-                   <div className="flex-1 text-center border-x border-white/5">
-                      <p className="text-[10px] text-textMuted uppercase font-bold mb-1 tracking-wider">Lighting</p>
-                      <p className="text-xs text-textMain">Studio</p>
-                   </div>
-                   <div className="flex-1 text-center">
-                      <p className="text-[10px] text-textMuted uppercase font-bold mb-1 tracking-wider">Aesthetic</p>
-                      <p className="text-xs text-textMain">Premium</p>
-                   </div>
+                <div className="mt-8 pt-8 border-t border-white/5 flex items-center justify-between text-textMuted text-[11px] uppercase tracking-widest font-medium">
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                    Verified Studio Prompt
+                  </div>
+                  <span>v1.2 Stable</span>
                 </div>
               </div>
             </motion.div>
