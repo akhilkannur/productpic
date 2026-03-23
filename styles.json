@@ -548,5 +548,105 @@
     "beforeImage": "/library/olipop-can/before.png",
     "afterImage": "/library/olipop-can/after.png",
     "isFree": false
+  },
+  {
+    "id": "chroma-ethereal-blue-can",
+    "name": "Ethereal Blue Chroma Can",
+    "pillar": "The Chroma-Gradient (Ethereal)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product must be the ONLY object in the frame. Maintain original angle and focal length.\n[LIGHTING]: Apply soft, multi-directional 'Chroma Lighting' with a dominant ethereal blue backlight. Use Subsurface Scattering logic to create a soft, glowing halo around the product's silhouette.\n[BACKGROUND]: A seamless, infinite gradient transitioning from deep navy (#0A0E1A) to soft electric blue (#4A90E2). No horizon line.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Tech-forward, premium, clean and ethereal.",
+    "beforeImage": "/library/chroma-ethereal-blue-can/before.png",
+    "afterImage": "/library/chroma-ethereal-blue-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "chroma-sunset-pouch",
+    "name": "Sunset Chroma Pouch",
+    "pillar": "The Chroma-Gradient (Ethereal)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product centered, no props.\n[LIGHTING]: Warm 'Internal Glow' lighting. Multi-tone soft gradients hitting the edges from the back.\n[BACKGROUND]: A smooth gradient of burnt orange (#CC5500) to deep violet (#2E0854).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Vibrant, high-energy, modern wellness.",
+    "beforeImage": "/library/chroma-sunset-pouch/before.png",
+    "afterImage": "/library/chroma-sunset-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "chroma-neon-mint-jar",
+    "name": "Neon Mint Chroma Jar",
+    "pillar": "The Chroma-Gradient (Ethereal)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Soft neon mint rim lighting. High-key diffused glow.\n[BACKGROUND]: Infinite gradient of charcoal (#121212) to bright mint green (#98FF98).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Fresh, futuristic, clean.",
+    "beforeImage": "/library/chroma-neon-mint-jar/before.png",
+    "afterImage": "/library/chroma-neon-mint-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "negative-rim-strobe-bottle",
+    "name": "Rim Strobe Negative Bottle",
+    "pillar": "The Negative Space (Chiaroscuro)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: High-contrast 'Hard Strobe' lighting from the far-left and far-right only. 90% of the product remains in deep shadow, with only the extreme edges (rims) illuminated by sharp, cool-white highlights.\n[BACKGROUND]: A solid, light-absorbing 'Vantablack' matte background (#000000).\n[SHADOW]: Infinite black void. No visible floor surface.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/negative-rim-strobe-bottle/before.png",
+    "afterImage": "/library/negative-rim-strobe-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "negative-top-down-can",
+    "name": "Top-Down Negative Can",
+    "pillar": "The Negative Space (Chiaroscuro)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Single sharp 'God-ray' spotlight from directly above. The base of the product disappears into total darkness.\n[BACKGROUND]: Midnight black (#000000).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/negative-top-down-can/before.png",
+    "afterImage": "/library/negative-top-down-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "caustic-water-ripple-jar",
+    "name": "Water Ripple Caustic Jar",
+    "pillar": "The Caustic Lab (Refractive)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Single-source 'Caustic Strobe' passing through an unseen water medium. Cast dynamic, 'dancing' light patterns (caustics) across the face of the product and the background wall.\n[BACKGROUND]: A solid, neutral studio-gray matte wall (#808080).\n[PRODUCT INTEGRITY]: Preserve label clarity while allowing refractive light patterns to skim the surface.",
+    "beforeImage": "/library/caustic-water-ripple-jar/before.png",
+    "afterImage": "/library/caustic-water-ripple-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "caustic-glass-prism-bottle",
+    "name": "Glass Prism Caustic Bottle",
+    "pillar": "The Caustic Lab (Refractive)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Sharp refractive light passing through a prism. Rainbow-edged caustics reflecting off the glass surface.\n[BACKGROUND]: Off-white minimal wall (#F5F5F5).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/caustic-glass-prism-bottle/before.png",
+    "afterImage": "/library/caustic-glass-prism-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "industrial-brushed-steel-can",
+    "name": "Brushed Steel Industrial Can",
+    "pillar": "The Industrial Matte (Texture)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Hard side-lighting that skims the background to reveal heavy texture.\n[BACKGROUND]: A vertical wall of heavily brushed gunmetal steel.\n[SHADOW]: Sharp, horizontal contact shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/industrial-brushed-steel-can/before.png",
+    "afterImage": "/library/industrial-brushed-steel-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "industrial-matte-resin-pouch",
+    "name": "Matte Resin Industrial Pouch",
+    "pillar": "The Industrial Matte (Texture)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Soft, top-down warehouse lighting.\n[BACKGROUND]: A raw, sand-blasted matte resin surface in deep forest green (#1B2622).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/industrial-matte-resin-pouch/before.png",
+    "afterImage": "/library/industrial-matte-resin-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "dusk-purple-indigo-bottle",
+    "name": "Purple Indigo Dusk Bottle",
+    "pillar": "The Dusk (Deep Golden Hour)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Temperature contrast. Warm orange light on the product face, cool purple/indigo shadows on the side.\n[BACKGROUND]: A soft-focus dusk sky transitioning from deep orange to midnight indigo.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/dusk-purple-indigo-bottle/before.png",
+    "afterImage": "/library/dusk-purple-indigo-bottle/after.png",
+    "isFree": false
   }
 ]
