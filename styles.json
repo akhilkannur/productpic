@@ -948,5 +948,55 @@
     "beforeImage": "/library/fog-wall-silhouette-jar/before.png",
     "afterImage": "/library/fog-wall-silhouette-jar/after.png",
     "isFree": false
+  },
+  {
+    "id": "indigo-backlight-glow-bottle",
+    "name": "Deep Indigo Backlight Bottle",
+    "pillar": "The Indigo-Backlight (Deep Glow)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Single intense deep indigo backlight. Creates a sharp, glowing blue-violet rim around the product. The face remains in soft shadow.\n[BACKGROUND]: A solid, dark navy matte background (#050814).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/indigo-backlight-glow-bottle/before.png",
+    "afterImage": "/library/indigo-backlight-glow-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "slate-texture-skim-can",
+    "name": "Textured Slate Skim Can",
+    "pillar": "The Slate-Texture (Materiality)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Hard side-lighting that skims the background at a 5-degree angle to reveal deep pits and micro-craters.\n[BACKGROUND]: A vertical wall of dark, raw volcanic slate.\n[SHADOW]: Sharp horizontal contact shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/slate-texture-skim-can/before.png",
+    "afterImage": "/library/slate-texture-skim-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "amber-fluid-caustic-jar",
+    "name": "Refractive Amber Fluid Jar",
+    "pillar": "The Amber-Fluid (Refractive)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Light passing through a thick amber liquid medium. Cast complex, warm refractive caustics (dancing light) across the jar.\n[BACKGROUND]: A warm sand matte background (#C2B280).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/amber-fluid-caustic-jar/before.png",
+    "afterImage": "/library/amber-fluid-caustic-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "pearl-softbox-iridescent-pouch",
+    "name": "Iridescent Pearl Softbox Pouch",
+    "pillar": "The Pearl-Softbox (Iridescent)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Omni-directional soft lighting with an iridescent, pearlescent quality. Rainbow-hued soft reflections on the product surface.\n[BACKGROUND]: A solid, off-white satin background with extremely soft fabric ripples.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.",
+    "beforeImage": "/library/pearl-softbox-iridescent-pouch/before.png",
+    "afterImage": "/library/pearl-softbox-iridescent-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "noir-strip-vertical-bottle",
+    "name": "Noir-Strip Vertical Bottle",
+    "pillar": "The Noir-Strip (Vertical Light)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: The product is a pitch-black silhouette. It stands in front of a single, vertical strip of bright white light.\n[BACKGROUND]: Absolute black (#000000) with a single vertical white light column centered behind the product.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface silhouette.",
+    "beforeImage": "/library/noir-strip-vertical-bottle/before.png",
+    "afterImage": "/library/noir-strip-vertical-bottle/after.png",
+    "isFree": false
   }
 ]
