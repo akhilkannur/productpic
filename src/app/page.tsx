@@ -118,7 +118,7 @@ export default function Home() {
                 className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 pointer-events-none">
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="text-accent text-xs font-mono mb-1">{style.pillar.toUpperCase()}</p>

@@ -38,5 +38,8 @@ generate.log
 extract-data.js
 setup-masters.js
 generate-image.js
-library/
-master-assets/
+/library/
+/master-assets/
+!/public/library/
+!/public/master-assets/
+
