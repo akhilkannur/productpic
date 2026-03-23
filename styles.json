@@ -1,0 +1,552 @@
+[
+  {
+    "id": "botanical-ceramic-plate-jar",
+    "name": "Botanical Ceramic Plate Jar",
+    "pillar": "The Botanical (High-End Wellness)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a handcrafted ceramic plate.\n[LIGHTING]: Soft, morning sunlight.\n[BACKGROUND]: A light sage green matte background (#9CAF88).\n[SHADOW]: Soft contact shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Artisanal, clean, premium pantry.",
+    "beforeImage": "/library/botanical-ceramic-plate-jar/before.png",
+    "afterImage": "/library/botanical-ceramic-plate-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "botanical-dew-drop-bottle",
+    "name": "Botanical Dew Drop Bottle",
+    "pillar": "The Botanical (High-End Wellness)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product centered on a clean, light-gray stone surface.\n[LIGHTING]: Soft morning light that highlights tiny, hyper-realistic condensation 'dew drops' on the glass bottle.\n[BACKGROUND]: A solid, light-sage green matte background (#BC8F8F).\n[SHADOW]: A very soft, subtle contact shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Fresh, pure, high-end natural wellness.",
+    "beforeImage": "/library/botanical-dew-drop-bottle/before.png",
+    "afterImage": "/library/botanical-dew-drop-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "botanical-gobo-shadow-can",
+    "name": "Botanical Gobo Shadow Can",
+    "pillar": "The Botanical (High-End Wellness)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product centered on a smooth, white plaster surface.\n[LIGHTING]: Soft, diffused morning sunlight from the side, casting a beautiful, organic 'Gobo' shadow of palm leaves across the product and background.\n[BACKGROUND]: A solid, off-white matte background (#F5F5F0).\n[SHADOW]: Soft, intricate organic leaf shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Clean, organic, high-end wellness.",
+    "beforeImage": "/library/botanical-gobo-shadow-can/before.png",
+    "afterImage": "/library/botanical-gobo-shadow-can/after.png",
+    "isFree": true
+  },
+  {
+    "id": "botanical-herb-shadow-bottle",
+    "name": "Botanical Herb Shadow Bottle",
+    "pillar": "The Botanical (High-End Wellness)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a white marble slab.\n[LIGHTING]: Soft light casting a delicate shadow of rosemary branches across the bottle.\n[BACKGROUND]: A warm-white matte background (#FDF5E6).\n[SHADOW]: Organic herbal shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Culinary luxury, organic, clean.",
+    "beforeImage": "/library/botanical-herb-shadow-bottle/before.png",
+    "afterImage": "/library/botanical-herb-shadow-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "botanical-linen-box",
+    "name": "Botanical Linen Box",
+    "pillar": "The Botanical (High-End Wellness)",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product resting on a neutral linen tablecloth with natural fabric ripples.\n[LIGHTING]: Warm, soft sunlight from a high window, creating long, gentle shadows.\n[BACKGROUND]: A solid, warm-cream matte background (#FFFDD0).\n[SHADOW]: Soft, diffused shadows on the linen texture.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Warm, tactile, premium organic.",
+    "beforeImage": "/library/botanical-linen-box/before.png",
+    "afterImage": "/library/botanical-linen-box/after.png",
+    "isFree": true
+  },
+  {
+    "id": "botanical-misty-morning-bottle",
+    "name": "Botanical Misty Morning Bottle",
+    "pillar": "The Botanical (High-End Wellness)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product standing on a damp slate surface.\n[LIGHTING]: Diffused, cool morning light with a hint of fog.\n[BACKGROUND]: A dark forest-green matte background (#013220).\n[SHADOW]: Very soft, ambient shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Fresh, mystical, high-end wellness.",
+    "beforeImage": "/library/botanical-misty-morning-bottle/before.png",
+    "afterImage": "/library/botanical-misty-morning-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "botanical-oak-wood-box",
+    "name": "Botanical Oak Wood Box",
+    "pillar": "The Botanical (High-End Wellness)",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a raw oak wood surface with visible grain.\n[LIGHTING]: Diffused window light with soft shadows.\n[BACKGROUND]: A warm cream matte background (#FFFDD0).\n[SHADOW]: Soft, ambient shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Rustic luxury, organic, warm.",
+    "beforeImage": "/library/botanical-oak-wood-box/before.png",
+    "afterImage": "/library/botanical-oak-wood-box/after.png",
+    "isFree": false
+  },
+  {
+    "id": "botanical-terracotta-sun-jar",
+    "name": "Botanical Terracotta Sun Jar",
+    "pillar": "The Botanical (High-End Wellness)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product on a raw terracotta pedestal.\n[LIGHTING]: Warm evening sun with dappled leaf shadows from unseen foliage.\n[BACKGROUND]: A warm sand matte background (#C2B280).\n[SHADOW]: Soft, organic shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Warm, earthy, premium organic.",
+    "beforeImage": "/library/botanical-terracotta-sun-jar/before.png",
+    "afterImage": "/library/botanical-terracotta-sun-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "clinical-aluminum-base-pouch",
+    "name": "Clinical Aluminum Base Pouch",
+    "pillar": "The Clinical (High-Tech Functional)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a brushed aluminum base.\n[LIGHTING]: High-key, sterile studio light.\n[BACKGROUND]: A cool gray matte background (#D3D3D3).\n[SHADOW]: Sharp, metallic contact shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Industrial tech, premium, clean.",
+    "beforeImage": "/library/clinical-aluminum-base-pouch/before.png",
+    "afterImage": "/library/clinical-aluminum-base-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "clinical-floating-pouch",
+    "name": "Clinical Floating Pouch",
+    "pillar": "The Clinical (High-Tech Functional)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product appears to be floating in a zero-gravity, white void.\n[LIGHTING]: Omni-directional soft light with glowing edges.\n[BACKGROUND]: A solid white matte background (#FFFFFF).\n[SHADOW]: Subtle ambient shadows only.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Futuristic, high-tech, premium.",
+    "beforeImage": "/library/clinical-floating-pouch/before.png",
+    "afterImage": "/library/clinical-floating-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "clinical-frosted-glass-glow-can",
+    "name": "Clinical Frosted Glass Glow Can",
+    "pillar": "The Clinical (High-Tech Functional)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a frosted acrylic block.\n[LIGHTING]: High-key, ultra-even studio lighting from all sides. A subtle, internal blue 'glow' emanates from beneath the frosted block.\n[BACKGROUND]: A solid, pure white matte background (#FFFFFF).\n[SHADOW]: Zero harsh shadows. Only a soft, ethereal ambient occlusion at the base.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: High-tech, clinical, premium performance.",
+    "beforeImage": "/library/clinical-frosted-glass-glow-can/before.png",
+    "afterImage": "/library/clinical-frosted-glass-glow-can/after.png",
+    "isFree": true
+  },
+  {
+    "id": "clinical-holographic-pouch",
+    "name": "Clinical Holographic Pouch",
+    "pillar": "The Clinical (High-Tech Functional)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product standing on a holographic or iridescent surface.\n[LIGHTING]: Pure white high-key light with subtle prismatic reflections on the floor.\n[BACKGROUND]: A solid white matte background (#FFFFFF).\n[SHADOW]: Soft prismatic shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Futuristic, clean, high-end tech.",
+    "beforeImage": "/library/clinical-holographic-pouch/before.png",
+    "afterImage": "/library/clinical-holographic-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "clinical-liquid-nitrogen-can",
+    "name": "Clinical Liquid Nitrogen Can",
+    "pillar": "The Clinical (High-Tech Functional)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product inside a futuristic cryo-chamber or cold-storage setting.\n[LIGHTING]: Cold blue-white fluorescent lighting with a hint of vapor or condensation.\n[BACKGROUND]: A brushed steel matte background (#71797E).\n[SHADOW]: Sharp, metallic contact shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: High-tech, ultra-cold, premium performance.",
+    "beforeImage": "/library/clinical-liquid-nitrogen-can/before.png",
+    "afterImage": "/library/clinical-liquid-nitrogen-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "clinical-neon-grid-can",
+    "name": "Clinical Neon Grid Can",
+    "pillar": "The Clinical (High-Tech Functional)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product standing on a minimalist white grid surface.\n[LIGHTING]: Thin neon-blue lines reflecting on the product.\n[BACKGROUND]: A solid white matte background (#FFFFFF).\n[SHADOW]: Soft, ambient grid shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Tech-forward, premium, clean.",
+    "beforeImage": "/library/clinical-neon-grid-can/before.png",
+    "afterImage": "/library/clinical-neon-grid-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "clinical-silver-rim-light-pouch",
+    "name": "Clinical Silver Rim Light Pouch",
+    "pillar": "The Clinical (High-Tech Functional)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product centered in a sterile, minimalist white studio.\n[LIGHTING]: Sharp, silver rim-lighting that creates a thin, glowing metallic outline on the product's edges.\n[BACKGROUND]: A solid, cool-gray matte background (#D3D3D3).\n[SHADOW]: A single, sharp, professional studio contact shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Scientific, premium, high-performance.",
+    "beforeImage": "/library/clinical-silver-rim-light-pouch/before.png",
+    "afterImage": "/library/clinical-silver-rim-light-pouch/after.png",
+    "isFree": true
+  },
+  {
+    "id": "hard-flash-cobalt-blue-box",
+    "name": "Hard Flash Cobalt Blue Box",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product centered on a cobalt blue studio floor.\n[LIGHTING]: Harsh direct camera flash.\n[BACKGROUND]: A solid cobalt blue matte background (#0047AB).\n[SHADOW]: Sharp, black contact shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Bold, modern, high-fashion.",
+    "beforeImage": "/library/hard-flash-cobalt-blue-box/before.png",
+    "afterImage": "/library/hard-flash-cobalt-blue-box/after.png",
+    "isFree": false
+  },
+  {
+    "id": "hard-flash-cobalt-blue-jar",
+    "name": "Hard Flash Cobalt Blue Jar",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a matte cobalt blue surface.\n[LIGHTING]: Harsh direct flash from directly above the lens, creating a thick, dark shadow ring around the base.\n[BACKGROUND]: A solid cobalt blue matte background (#0047AB).\n[SHADOW]: Thick, dark ring shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Bold, modern, editorial pantry.",
+    "beforeImage": "/library/hard-flash-cobalt-blue-jar/before.png",
+    "afterImage": "/library/hard-flash-cobalt-blue-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "hard-flash-graffiti-wall-bag",
+    "name": "Hard Flash Graffiti Wall Bag",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Chips/Snacks",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product in front of a colorful, abstract graffiti wall.\n[LIGHTING]: Harsh direct flash, creating high-contrast colors and deep shadows.\n[BACKGROUND]: A graffiti-style abstract background.\n[SHADOW]: Aggressive black shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Streetwear, bold, Gen-Z.",
+    "beforeImage": "/library/hard-flash-graffiti-wall-bag/before.png",
+    "afterImage": "/library/hard-flash-graffiti-wall-bag/after.png",
+    "isFree": false
+  },
+  {
+    "id": "hard-flash-metallic-silver-bag",
+    "name": "Hard Flash Metallic Silver Bag",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Chips/Snacks",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a crumpled metallic silver foil surface.\n[LIGHTING]: Intense direct flash reflecting off the foil, creating high-contrast sparkles and deep shadows.\n[BACKGROUND]: A solid charcoal-black matte background (#121212).\n[SHADOW]: Aggressive, sharp reflections and shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Edgy, high-fashion, premium streetwear snack.",
+    "beforeImage": "/library/hard-flash-metallic-silver-bag/before.png",
+    "afterImage": "/library/hard-flash-metallic-silver-bag/after.png",
+    "isFree": false
+  },
+  {
+    "id": "hard-flash-red-studio-bag",
+    "name": "Hard Flash Red Studio Bag",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Chips/Snacks",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product centered on a bright red studio background.\n[LIGHTING]: Harsh direct flash.\n[BACKGROUND]: A solid bright red matte background (#FF0000).\n[SHADOW]: Sharp, aggressive shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Bold, disruptive, high-energy.",
+    "beforeImage": "/library/hard-flash-red-studio-bag/before.png",
+    "afterImage": "/library/hard-flash-red-studio-bag/after.png",
+    "isFree": false
+  },
+  {
+    "id": "hard-flash-saturated-pink-box",
+    "name": "Hard Flash Saturated Pink Box",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product centered on a glossy neon pink surface.\n[LIGHTING]: Harsh direct camera flash, creating a sharp black contact shadow.\n[BACKGROUND]: A solid, saturated neon pink matte background (#FF69B4).\n[SHADOW]: Sharp, dense shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Hyper-pop, bold, Gen-Z aesthetic.",
+    "beforeImage": "/library/hard-flash-saturated-pink-box/before.png",
+    "afterImage": "/library/hard-flash-saturated-pink-box/after.png",
+    "isFree": true
+  },
+  {
+    "id": "hard-flash-wet-asphalt-can",
+    "name": "Hard Flash Wet Asphalt Can",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a wet asphalt surface.\n[LIGHTING]: Harsh flash reflecting off the water on the asphalt.\n[BACKGROUND]: A midnight-black matte background (#000000).\n[SHADOW]: Sharp, dark reflections.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Urban, edgy, premium editorial.",
+    "beforeImage": "/library/hard-flash-wet-asphalt-can/before.png",
+    "afterImage": "/library/hard-flash-wet-asphalt-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "hard-flash-white-seamless-can",
+    "name": "Hard Flash White Seamless Can",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a white seamless paper floor that curves up into the background.\n[LIGHTING]: Single, harsh direct strobe flash from the front-left, creating a dark, aggressive shadow on the floor.\n[BACKGROUND]: A pure white matte background (#FFFFFF).\n[SHADOW]: Harsh, high-contrast black 'Drop Shadow'.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Editorial, raw, high-fashion DTC.",
+    "beforeImage": "/library/hard-flash-white-seamless-can/before.png",
+    "afterImage": "/library/hard-flash-white-seamless-can/after.png",
+    "isFree": true
+  },
+  {
+    "id": "hard-flash-yellow-studio-pouch",
+    "name": "Hard Flash Yellow Studio Pouch",
+    "pillar": "The Hard-Flash (Hyper-Pop)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product centered on a bright yellow studio background.\n[LIGHTING]: Harsh direct flash, creating a high-contrast shadow on the background wall.\n[BACKGROUND]: A solid, bright canary yellow matte background (#FFEF00).\n[SHADOW]: Sharp, aggressive shadow on the wall.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: High-energy, bold, disruptive DTC.",
+    "beforeImage": "/library/hard-flash-yellow-studio-pouch/before.png",
+    "afterImage": "/library/hard-flash-yellow-studio-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "liquid-death-can",
+    "name": "Liquid Death Can",
+    "pillar": "Uncategorized",
+    "category": "Beverage",
+    "prompt": "",
+    "beforeImage": "/library/liquid-death-can/before.png",
+    "afterImage": "/library/liquid-death-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "magic-spoon-box",
+    "name": "Magic Spoon Box",
+    "pillar": "Uncategorized",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product must be the ONLY object in the frame. Maintain the original product's angle, position, and focal length. NO props, NO extra objects, NO accessories, and NO hands.\n[LIGHTING]: Apply bright, high-key studio lighting. Use soft, even front illumination with a subtle, vibrant magenta or cyan rim light to create a playful, energetic edge.\n[BACKGROUND]: A completely empty, bold, highly saturated, seamless solid 'Electric Purple' or vibrant 'Hot Pink' background.\n[SHADOW]: A very soft, clean, highly diffused contact shadow directly beneath the product. No harsh drop shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, graphics, or branding. The product must remain exactly as it appears in the uploaded photo, with all original labels and artwork 100% intact.\n[MOOD]: Playful, high-energy, hyper-saturated, premium studio photography.",
+    "beforeImage": "/library/magic-spoon-box/before.png",
+    "afterImage": "/library/magic-spoon-box/after.png",
+    "isFree": false
+  },
+  {
+    "id": "momofuku-jar",
+    "name": "Momofuku Jar",
+    "pillar": "Uncategorized",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product must be the ONLY object in the frame. Maintain the original product's angle, position, and focal length. NO props, NO kitchen tools, NO ingredients, and NO extra items.\n[LIGHTING]: Apply directional, hard 'Kitchen Spotlight' lighting to create deep, dramatic shadows and bright, glistening specular highlights on the edges.\n[BACKGROUND]: A completely empty, solid, dark moody matte background (deep slate or dark charcoal). No textures or environmental elements.\n[SHADOW]: A sharp, dense contact shadow directly beneath the jar, adding a sense of weight and 'Modern Grit'.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, graphics, or branding. The product must remain exactly as it appears in the uploaded photo, with all original labels and artwork 100% intact.\n[MOOD]: Premium, minimalist, chef-driven, authentic and bold 'Modern Grit' aesthetic.",
+    "beforeImage": "/library/momofuku-jar/before.png",
+    "afterImage": "/library/momofuku-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-brass-plate-bottle",
+    "name": "Monolith Brass Plate Bottle",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a brushed brass circular plate.\n[LIGHTING]: Low-key, dramatic spot lighting from above, making the brass plate glow subtly.\n[BACKGROUND]: A dark, textured slate wall background (#2F4F4F).\n[SHADOW]: A dark, soft shadow beneath the brass plate.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Industrial luxury, premium, nocturnal.",
+    "beforeImage": "/library/monolith-brass-plate-bottle/before.png",
+    "afterImage": "/library/monolith-brass-plate-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-clay-shadow-pouch",
+    "name": "Monolith Clay Shadow Pouch",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product leaning slightly against a raw terracotta clay wall.\n[LIGHTING]: Side-lighting that casts sharp, geometric shadows from an unseen architectural element across the wall and product.\n[BACKGROUND]: A raw, earthy terracotta background (#E2725B).\n[SHADOW]: Sharp, high-contrast geometric shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Earthy, tactile, high-end organic.",
+    "beforeImage": "/library/monolith-clay-shadow-pouch/before.png",
+    "afterImage": "/library/monolith-clay-shadow-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-concrete-box",
+    "name": "Monolith Concrete Box",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product must be centered on a smooth, industrial concrete pedestal.\n[LIGHTING]: Hard directional light from the left, creating a strong 'Chiaroscuro' effect with deep shadows.\n[BACKGROUND]: A raw, cold gray concrete wall background (#808080).\n[SHADOW]: A heavy, sharp-edged shadow cast onto the concrete wall behind the product.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Brutalist, premium industrial.",
+    "beforeImage": "/library/monolith-concrete-box/before.png",
+    "afterImage": "/library/monolith-concrete-box/after.png",
+    "isFree": true
+  },
+  {
+    "id": "monolith-lava-rock-can",
+    "name": "Monolith Lava Rock Can",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a black, porous volcanic lava rock.\n[LIGHTING]: Side-lighting that highlights the rough texture of the rock.\n[BACKGROUND]: A dark charcoal matte background (#1A1A1A).\n[SHADOW]: Sharp contact shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Raw, industrial, premium energy.",
+    "beforeImage": "/library/monolith-lava-rock-can/before.png",
+    "afterImage": "/library/monolith-lava-rock-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-limestone-pouch",
+    "name": "Monolith Limestone Pouch",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a minimalist limestone step.\n[LIGHTING]: Warm, late-afternoon sunlight coming through a high window, creating soft-edged but long shadows.\n[BACKGROUND]: A solid, warm-white plaster wall (#FDF5E6).\n[SHADOW]: A long, soft shadow stretching across the limestone and wall.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: High-end organic wellness, quiet luxury.",
+    "beforeImage": "/library/monolith-limestone-pouch/before.png",
+    "afterImage": "/library/monolith-limestone-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-marble-slab-can",
+    "name": "Monolith Marble Slab Can",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product centered on a polished white Carrara marble slab.\n[LIGHTING]: Bright, airy window light, creating soft reflections on the marble surface.\n[BACKGROUND]: A solid, light-cream matte background (#FFFDD0).\n[SHADOW]: A soft, faint shadow stretching away from the product.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Timeless, elegant, premium beverage.",
+    "beforeImage": "/library/monolith-marble-slab-can/before.png",
+    "afterImage": "/library/monolith-marble-slab-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-minimal-arch-jar",
+    "name": "Monolith Minimal Arch Jar",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product placed inside a clean, minimalist white plaster archway.\n[LIGHTING]: Balanced studio lighting with a slight bias from the front-left to highlight the jar's texture.\n[BACKGROUND]: A solid, pure white matte background (#FFFFFF).\n[SHADOW]: A soft, circular shadow directly beneath the jar.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Gallery-style, clean, high-end pantry.",
+    "beforeImage": "/library/monolith-minimal-arch-jar/before.png",
+    "afterImage": "/library/monolith-minimal-arch-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-obsidian-bag",
+    "name": "Monolith Obsidian Bag",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Chips/Snacks",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a jagged, black obsidian rock shard.\n[LIGHTING]: Dramatic rim lighting from behind, creating a glowing outline around the product.\n[BACKGROUND]: A solid, midnight-black matte background (#000000).\n[SHADOW]: A dense, dark shadow below the rock shard.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Dark luxury, premium, 'midnight' aesthetic.",
+    "beforeImage": "/library/monolith-obsidian-bag/before.png",
+    "afterImage": "/library/monolith-obsidian-bag/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-sandstone-pouch",
+    "name": "Monolith Sandstone Pouch",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product standing on a stacked row of raw sandstone blocks.\n[LIGHTING]: Harsh noon sun with sharp shadows.\n[BACKGROUND]: A warm sand matte background (#C2B280).\n[SHADOW]: Geometric, sharp shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Desert luxury, organic, premium.",
+    "beforeImage": "/library/monolith-sandstone-pouch/before.png",
+    "afterImage": "/library/monolith-sandstone-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-terracotta-jar",
+    "name": "Monolith Terracotta Jar",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a stacked row of raw terracotta tiles.\n[LIGHTING]: Warm, diffused sunlight, highlighting the matte texture of the jar and the tiles.\n[BACKGROUND]: A solid, warm-sand matte background (#C2B280).\n[SHADOW]: Soft, overlapping shadows from the tiles.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Warm, rustic luxury, Mediterranean.",
+    "beforeImage": "/library/monolith-terracotta-jar/before.png",
+    "afterImage": "/library/monolith-terracotta-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-travertine-bottle",
+    "name": "Monolith Travertine Bottle",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product centered on a Travertine pillar.\n[LIGHTING]: Harsh noon sun.\n[BACKGROUND]: A warm sand matte background (#C2B280).\n[SHADOW]: Long, dramatic architectural shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Classical luxury, premium.",
+    "beforeImage": "/library/monolith-travertine-bottle/before.png",
+    "afterImage": "/library/monolith-travertine-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "monolith-travertine-can",
+    "name": "Monolith Travertine Can",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product must be centered, standing on a raw, unpolished Travertine stone block. NO props, NO hands, and NO extra items.\n[LIGHTING]: Apply harsh, single-source 'high noon' sunlight from the top-right, creating deep, sharp architectural shadows and bright, crisp highlights on the stone texture.\n[BACKGROUND]: A solid, neutral beige matte background (#D2B48C).\n[SHADOW]: A sharp, dark 'Contact Shadow' on the stone block and a long, dramatic geometric shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Architectural, expensive, minimalist luxury.",
+    "beforeImage": "/library/monolith-travertine-can/before.png",
+    "afterImage": "/library/monolith-travertine-can/after.png",
+    "isFree": true
+  },
+  {
+    "id": "monolith-zen-bottle",
+    "name": "Monolith Zen Bottle",
+    "pillar": "The Monolith (Architectural Luxury)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product resting on a single, large, smooth dark river stone.\n[LIGHTING]: Soft, diffused morning light, creating very gentle highlights on the glass bottle.\n[BACKGROUND]: A solid, neutral light-gray matte background (#D3D3D3).\n[SHADOW]: A subtle contact shadow between the bottle and the stone.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Zen, minimalist, premium organic.",
+    "beforeImage": "/library/monolith-zen-bottle/before.png",
+    "afterImage": "/library/monolith-zen-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-bronze-statue-bottle",
+    "name": "Nocturnal Bronze Statue Bottle",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Oils/Liquids",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product next to a minimalist, abstract bronze sculpture.\n[LIGHTING]: Low-key dramatic spot lighting.\n[BACKGROUND]: A dark brown matte background (#3D2B1F).\n[SHADOW]: Soft, dark shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: High-end gallery, opulent.",
+    "beforeImage": "/library/nocturnal-bronze-statue-bottle/before.png",
+    "afterImage": "/library/nocturnal-bronze-statue-bottle/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-cigar-lounge-can",
+    "name": "Nocturnal Cigar Lounge Can",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product on a dark, polished mahogany wood surface.\n[LIGHTING]: Dim, warm 'lounge' lighting with a single sharp spotlight from above.\n[BACKGROUND]: A dark, wood-paneled wall background (#2E1503).\n[SHADOW]: A rich, dark shadow on the wood surface.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Traditional luxury, warm, sophisticated.",
+    "beforeImage": "/library/nocturnal-cigar-lounge-can/before.png",
+    "afterImage": "/library/nocturnal-cigar-lounge-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-cityscape-box",
+    "name": "Nocturnal Cityscape Box",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a dark wooden ledge. In the distance, out-of-focus city lights create a beautiful 'bokeh' effect.\n[LIGHTING]: Soft, multi-colored ambient light (purples and blues) reflecting the distant city lights.\n[BACKGROUND]: A dark, nocturnal city skyline, heavily blurred (bokeh).\n[SHADOW]: Soft, ambient shadows that blend with the ledge texture.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Urban luxury, modern, sophisticated.",
+    "beforeImage": "/library/nocturnal-cityscape-box/before.png",
+    "afterImage": "/library/nocturnal-cityscape-box/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-emerald-can",
+    "name": "Nocturnal Emerald Can",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product centered on an emerald-green marble pedestal.\n[LIGHTING]: High-contrast spotlighting from directly above, highlighting the marble's veins and the product's top.\n[BACKGROUND]: A solid, dark emerald matte background (#043927).\n[SHADOW]: A dense, dark shadow directly beneath the pedestal.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Royal luxury, nocturnal, opulent.",
+    "beforeImage": "/library/nocturnal-emerald-can/before.png",
+    "afterImage": "/library/nocturnal-emerald-can/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-glass-reflections-jar",
+    "name": "Nocturnal Glass Reflections Jar",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a wet, dark glass surface.\n[LIGHTING]: Cool-toned studio lighting that creates sharp, complex reflections of the jar on the glass.\n[BACKGROUND]: A solid, dark slate matte background (#2F4F4F).\n[SHADOW]: Dark, mirror-like reflections on the wet glass.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Modern, sleek, high-end editorial.",
+    "beforeImage": "/library/nocturnal-glass-reflections-jar/before.png",
+    "afterImage": "/library/nocturnal-glass-reflections-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-gold-leaf-box",
+    "name": "Nocturnal Gold Leaf Box",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a dark surface with a subtle gold-leaf pattern.\n[LIGHTING]: Dim, warm golden light.\n[BACKGROUND]: A midnight black matte background (#000000).\n[SHADOW]: Deep, dark shadows.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Opulent, premium, festive luxury.",
+    "beforeImage": "/library/nocturnal-gold-leaf-box/before.png",
+    "afterImage": "/library/nocturnal-gold-leaf-box/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-leather-box",
+    "name": "Nocturnal Leather Box",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Cereal/Bars",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product resting on a dark, grained leather surface (like a high-end briefcase or desk).\n[LIGHTING]: Warm, amber-toned spotlight from the front-right, highlighting the texture of the leather and the product.\n[BACKGROUND]: A solid, dark brown matte background (#3D2B1F).\n[SHADOW]: Short, soft shadows that emphasize the leather's grain.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Classic luxury, masculine, premium executive.",
+    "beforeImage": "/library/nocturnal-leather-box/before.png",
+    "afterImage": "/library/nocturnal-leather-box/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-midnight-garden-pouch",
+    "name": "Nocturnal Midnight Garden Pouch",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product in a dark, nocturnal garden setting. Subtle silhouettes of leaves in the background.\n[LIGHTING]: Cool, silver-toned 'moonlight' from the top-left, casting soft, leaf-shaped shadows across the product.\n[BACKGROUND]: A dark, forest-green matte background (#013220).\n[SHADOW]: Soft, organic shadows from unseen foliage.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Mystical, organic luxury, nocturnal wellness.",
+    "beforeImage": "/library/nocturnal-midnight-garden-pouch/before.png",
+    "afterImage": "/library/nocturnal-midnight-garden-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-obsidian-can",
+    "name": "Nocturnal Obsidian Can",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product centered on a black mirror-like obsidian surface.\n[LIGHTING]: Dramatic blue-toned rim lighting from behind, creating a glowing outline around the product's silhouette.\n[BACKGROUND]: A solid, obsidian-black matte background (#0B0B0B).\n[SHADOW]: Sharp, dark reflections on the obsidian surface.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Cyberpunk luxury, nocturnal, high-end nightlife.",
+    "beforeImage": "/library/nocturnal-obsidian-can/before.png",
+    "afterImage": "/library/nocturnal-obsidian-can/after.png",
+    "isFree": true
+  },
+  {
+    "id": "nocturnal-onyx-jar",
+    "name": "Nocturnal Onyx Jar",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product standing on a polished black onyx slab.\n[LIGHTING]: Gold-toned 'Golden Hour' directional light from the side, creating warm, metallic highlights on the jar.\n[BACKGROUND]: A solid, dark onyx-black matte background (#0A0A0A).\n[SHADOW]: Deep, dark reflections and a sharp contact shadow.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Opulent, premium, 'liquid gold' aesthetic.",
+    "beforeImage": "/library/nocturnal-onyx-jar/before.png",
+    "afterImage": "/library/nocturnal-onyx-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-ruby-glass-jar",
+    "name": "Nocturnal Ruby Glass Jar",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product on a dark ruby-red glass surface.\n[LIGHTING]: Backlit with a warm, dim red light, creating glowing edges.\n[BACKGROUND]: A midnight-black matte background (#000000).\n[SHADOW]: Deep red reflections.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Romantic, luxurious, artisanal.",
+    "beforeImage": "/library/nocturnal-ruby-glass-jar/before.png",
+    "afterImage": "/library/nocturnal-ruby-glass-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-smoke-jar",
+    "name": "Nocturnal Smoke Jar",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Sauces/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product in a dark, moody setting with a very subtle, elegant wisp of white smoke in the background.\n[LIGHTING]: Warm, candle-like flickering light from the side, creating dynamic, dancing highlights on the glass jar.\n[BACKGROUND]: A dark, charcoal-gray plaster background (#333333).\n[SHADOW]: Long, flickering shadows that feel cinematic.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Mysterious, artisanal, premium 'after-hours' vibe.",
+    "beforeImage": "/library/nocturnal-smoke-jar/before.png",
+    "afterImage": "/library/nocturnal-smoke-jar/after.png",
+    "isFree": false
+  },
+  {
+    "id": "nocturnal-velvet-pouch",
+    "name": "Nocturnal Velvet Pouch",
+    "pillar": "The Nocturnal (Midnight Editorial)",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product resting on a luxurious, deep navy velvet surface with rich fabric folds.\n[LIGHTING]: Single-source 'Rembrandt' lighting from the side, creating soft highlights on the velvet and a dramatic, moody profile on the product.\n[BACKGROUND]: A solid, midnight-blue matte background (#191970).\n[SHADOW]: Deep, soft shadows that blend into the velvet texture.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, or branding.\n[MOOD]: Nocturnal luxury, premium, rich and moody.",
+    "beforeImage": "/library/nocturnal-velvet-pouch/before.png",
+    "afterImage": "/library/nocturnal-velvet-pouch/after.png",
+    "isFree": true
+  },
+  {
+    "id": "oats-overnight-pouch",
+    "name": "Oats Overnight Pouch",
+    "pillar": "Uncategorized",
+    "category": "Snacks/Supps",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product must be the ONLY object in the frame. Maintain the original product's angle, position, and focal length. NO props, NO blender bottles, NO ingredients, and NO accessories.\n[LIGHTING]: Apply hard, directional studio lighting mimicking bright, direct sunlight to create sharp, defined shadows and a high-performance 'Pop-out' effect.\n[BACKGROUND]: A completely empty, solid, vibrant 'Olive Drab' (#5E9D2B) or 'Curious Blue' (#1990C6) seamless background.\n[SHADOW]: A sharp, defined 'Hard Shadow' stretching slightly to the side, giving the pouch a strong 3D presence.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, graphics, or branding. The product must remain exactly as it appears in the uploaded photo, with all original labels and artwork 100% intact.\n[MOOD]: Optimistic, high-energy, modern fuel, vibrant and functional studio photography.",
+    "beforeImage": "/library/oats-overnight-pouch/before.png",
+    "afterImage": "/library/oats-overnight-pouch/after.png",
+    "isFree": false
+  },
+  {
+    "id": "olipop-can",
+    "name": "Olipop Can",
+    "pillar": "Uncategorized",
+    "category": "Beverage",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: The product must be the ONLY object in the frame. Maintain the original product's angle, position, and focal length. NO props, NO accessories, NO hands, and NO extra items of any kind.\n[LIGHTING]: Apply soft, warm 'Golden Hour' directional lighting from the side, creating long, gentle shadows and a nostalgic, sun-drenched feel.\n[BACKGROUND]: A completely empty, solid, warm off-white or cream-colored matte background (#F5F5F0). No textures, no patterns, and no additional elements.\n[SHADOW]: A soft, elongated 'Golden Hour' shadow stretching away from the product, with very soft edges.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE the product's original surface. DO NOT add any new text, logos, graphics, or branding. The product must remain exactly as it appears in the uploaded photo, with all original labels and artwork 100% intact.\n[MOOD]: Modern Nostalgia, joyful, warm, 1970s retro-soda shop aesthetic. Clean and airy.",
+    "beforeImage": "/library/olipop-can/before.png",
+    "afterImage": "/library/olipop-can/after.png",
+    "isFree": false
+  }
+]
