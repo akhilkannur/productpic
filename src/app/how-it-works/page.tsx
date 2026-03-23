@@ -39,11 +39,7 @@ export default function HowItWorks() {
 
       <main className="max-w-[1200px] mx-auto px-6 py-20">
         <div className="text-center mb-20">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter"
-          >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter">
             How it <span className="text-textMuted font-light">Works.</span>
           </h1>
           <p className="text-textMuted text-xl max-w-2xl mx-auto font-light">
