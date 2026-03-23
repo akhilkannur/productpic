@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/lib/supabase";
-import { Lock, Copy, Check, Eye } from "lucide-react";
+import { Lock, Copy, Check, Eye, X } from "lucide-react";
 
 export default function Home() {
   const [filter, setFilter] = useState("All");
@@ -22,7 +22,6 @@ export default function Home() {
       if (error) {
         console.error("Error fetching styles:", error);
       } else {
-        // Map database snake_case to camelCase for the frontend
         const mappedData = data.map((item: any) => ({
           id: item.id,
           name: item.name,
@@ -61,85 +60,149 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground px-6 py-12">
+    <div className="font-sans antialiased min-h-screen flex flex-col selection:bg-accent selection:text-black w-full h-full">
       {/* Header */}
-      <header className="max-w-7xl mx-auto mb-16 text-center">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter"
-        >
-          ProductPic<span className="text-accent">.pro</span>
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="text-xl text-gray-400 max-w-2xl mx-auto mb-10"
-        >
-          The High-End Scene Vault for DTC Brands. 55+ Studio-grade prompts for photorealistic AI product renders.
-        </motion.p>
+      <header className="sticky top-0 z-50 w-full border-b border-borderSubtle bg-background/80 backdrop-blur-xl">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-3 cursor-pointer group">
+            <div className="w-8 h-8 rounded bg-accent flex items-center justify-center text-background">
+              <i className="ri-camera-lens-fill text-xl"></i>
+            </div>
+            <span className="font-bold text-2xl tracking-tight text-textMain group-hover:opacity-80 transition-opacity">
+              ProductPic<span className="text-accent">.pro</span>
+            </span>
+          </div>
+          
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-textMuted">
+            <a href="#" className="text-textMain hover:text-accent transition-colors">Gallery</a>
+            <a href="#" className="hover:text-textMain transition-colors">Prompt Guide</a>
+            <a href="#" className="hover:text-textMain transition-colors">Pricing</a>
+            <a href="#" className="hover:text-textMain transition-colors">Enterprise</a>
+          </nav>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-3">
-          {pillars.map((pillar) => (
-            <button
-              key={pillar}
-              onClick={() => setFilter(pillar)}
-              className={`px-6 py-2 rounded-full border text-sm transition-all ${
-                filter === pillar 
-                  ? "bg-accent text-background border-accent" 
-                  : "border-white/10 hover:border-accent/50 text-gray-400"
-              }`}
-            >
-              {pillar.split(" (")[0]}
-            </button>
-          ))}
+          <div className="flex items-center gap-5">
+            <a href="#" className="text-sm font-medium text-textMuted hover:text-textMain transition-colors hidden sm:block">Sign In</a>
+            <a href="#" className="bg-accent text-background px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-accent-hover transition-colors shadow-[0_0_15px_rgba(210,180,140,0.15)]">
+              Get Access
+            </a>
+          </div>
         </div>
       </header>
 
-      {/* Grid */}
-      <div className="max-w-7xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-        {filteredStyles.map((style, idx) => (
-          <motion.div
-            key={style.id}
-            layout
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: idx * 0.05 }}
-            onClick={() => setSelectedStyle(style)}
-            className="relative group cursor-pointer break-inside-avoid rounded-2xl overflow-hidden border border-white/5 bg-card hover:border-accent/30 transition-all"
-          >
-            {/* Image Container */}
-            <div className="relative aspect-[3/4] overflow-hidden">
-              <img 
-                src={style.afterImage} 
-                alt={style.name}
-                className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 pointer-events-none">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-accent text-xs font-mono mb-1">{style.pillar.toUpperCase()}</p>
-                    <h3 className="text-xl font-bold">{style.name}</h3>
-                  </div>
-                  {style.isFree ? (
-                    <span className="bg-green-500/20 text-green-400 text-[10px] px-2 py-1 rounded border border-green-500/30 font-bold uppercase tracking-wider">Free</span>
-                  ) : (
-                    <Lock size={18} className="text-accent" />
-                  )}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+      {/* Hero Section */}
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-16 pb-10 w-full">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-[1.1] text-textMain">
+            Studio Quality.<br />
+            <span className="text-textMuted font-light">Zero Setup.</span>
+          </h1>
+          <p className="text-textMuted text-lg md:text-xl leading-relaxed max-w-2xl font-light">
+            The definitive prompt library for DTC brand owners. Generate photorealistic, highly-stylized product photography instantly.
+          </p>
+        </div>
+      </section>
+
+      {/* Filter Bar */}
+      <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-borderSubtle w-full">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-5">
+          <div className="flex items-center gap-3 overflow-x-auto pb-1 scrollbar-hide">
+            {pillars.map((pillar) => (
+              <button
+                key={pillar}
+                onClick={() => setFilter(pillar)}
+                className={`shrink-0 px-6 py-2.5 rounded-full border text-sm transition-all whitespace-nowrap ${
+                  filter === pillar
+                    ? "border-accent bg-accent text-background font-semibold shadow-[0_0_10px_rgba(210,180,140,0.1)]"
+                    : "border-borderSubtle hover:border-accent/40 hover:bg-surface text-textMuted hover:text-textMain font-medium"
+                }`}
+              >
+                {pillar === "All" ? "All Scenes" : pillar.split(" (")[0]}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Main Grid Content */}
+      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-12 w-full flex-grow">
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          {filteredStyles.map((style, idx) => (
+            <motion.div
+              key={style.id}
+              layout
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.02 }}
+              onClick={() => setSelectedStyle(style)}
+              className="group relative rounded-xl overflow-hidden bg-surface border border-borderSubtle hover:border-accent/30 transition-all duration-500 break-inside-avoid shadow-2xl shadow-black/50 cursor-pointer flex flex-col"
+            >
+              <div className="relative w-full overflow-hidden aspect-[3/4]">
+                {/* Background placeholder if image is loading */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center">
+                  <i className="ri-image-circle-line text-white/5 text-6xl"></i>
+                </div>
+                
+                <img 
+                  src={style.afterImage} 
+                  alt={style.name}
+                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                />
+
+                {/* Lock Overlay for non-free prompts */}
+                {!style.isFree && (
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-10 backdrop-blur-[2px] pointer-events-none">
+                    <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                      <i className="ri-lock-2-fill text-accent text-2xl drop-shadow-[0_0_8px_rgba(210,180,140,0.5)]"></i>
+                    </div>
+                    <span className="text-white font-medium text-sm tracking-wide translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 ease-out">Unlock Prompt</span>
+                  </div>
+                )}
+                
+                {/* Free label */}
+                {style.isFree && (
+                  <div className="absolute top-4 right-4 z-20">
+                    <span className="bg-green-500/20 text-green-400 text-[10px] px-2 py-1 rounded border border-green-500/30 font-bold uppercase tracking-wider backdrop-blur-sm">Free</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="p-5 relative z-20 bg-surface border-t border-borderSubtle">
+                <div className="flex items-center justify-between mb-2.5">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent/80 font-medium">
+                    {style.pillar.split(" (")[0]}
+                  </span>
+                  <i className="ri-arrow-right-up-line text-textMuted opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all duration-300 -translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0"></i>
+                </div>
+                <h3 className="text-textMain font-medium text-base leading-snug group-hover:text-accent transition-colors duration-300">
+                  {style.name}
+                </h3>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="w-full border-t border-borderSubtle bg-surface mt-auto">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded bg-accent/20 flex items-center justify-center text-accent">
+              <i className="ri-camera-lens-fill text-sm"></i>
+            </div>
+            <span className="font-medium text-lg text-textMain tracking-tight">ProductPic.pro</span>
+          </div>
+          <p className="text-textMuted text-sm font-light">© 2024 ProductPic.pro. All rights reserved.</p>
+          <div className="flex items-center gap-4 text-textMuted">
+            <a href="#" className="hover:text-accent transition-colors"><i className="ri-twitter-x-line text-xl"></i></a>
+            <a href="#" className="hover:text-accent transition-colors"><i className="ri-instagram-line text-xl"></i></a>
+          </div>
+        </div>
+      </footer>
 
       {/* Detail Modal */}
       <AnimatePresence>
         {selectedStyle && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
+          <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 md:p-8">
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -148,15 +211,21 @@ export default function Home() {
               className="absolute inset-0 bg-black/90 backdrop-blur-xl"
             />
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-5xl bg-card border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative w-full max-w-5xl bg-surface border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
             >
               {/* Image Side */}
-              <div className="md:w-1/2 aspect-square relative bg-background flex items-center justify-center">
-                <img src={selectedStyle.afterImage} className="object-contain w-full h-full" />
+              <div className="md:w-1/2 aspect-square relative bg-background flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
+                <img src={selectedStyle.afterImage} className="object-contain w-full h-full" alt={selectedStyle.name} />
                 <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest border border-white/10 uppercase">Render</div>
+                <button 
+                  onClick={() => setSelectedStyle(null)}
+                  className="absolute top-4 right-4 md:hidden p-2 bg-black/50 backdrop-blur-md rounded-full text-white"
+                >
+                  <X size={20} />
+                </button>
               </div>
 
               {/* Content Side */}
@@ -165,40 +234,43 @@ export default function Home() {
                   <div className="flex justify-between items-start mb-6">
                     <div>
                       <p className="text-accent font-mono text-xs mb-2 tracking-widest uppercase">{selectedStyle.pillar}</p>
-                      <h2 className="text-3xl font-bold tracking-tight leading-none mb-2">{selectedStyle.name}</h2>
-                      <p className="text-gray-500 text-sm">Best for: {selectedStyle.category}</p>
+                      <h2 className="text-3xl font-bold tracking-tight leading-none mb-2 text-textMain">{selectedStyle.name}</h2>
+                      <p className="text-textMuted text-sm">Best for: {selectedStyle.category}</p>
                     </div>
                     <button 
                       onClick={() => setSelectedStyle(null)}
-                      className="p-2 hover:bg-white/5 rounded-full transition-colors text-gray-500"
+                      className="hidden md:block p-2 hover:bg-white/5 rounded-full transition-colors text-textMuted"
                     >
-                      <Eye size={20} />
+                      <X size={24} />
                     </button>
                   </div>
 
                   <div className="space-y-6">
                     <div className="p-6 rounded-2xl bg-black/40 border border-white/5 relative group">
                       <div className="flex justify-between items-center mb-4">
-                        <span className="text-[10px] font-bold tracking-widest uppercase text-gray-500">The AI Prompt</span>
-                        <button 
-                          onClick={() => handleCopy(selectedStyle.prompt)}
-                          className="flex items-center gap-2 text-xs text-accent hover:text-white transition-colors"
-                        >
-                          {copied ? <Check size={14} /> : <Copy size={14} />}
-                          {copied ? "Copied" : "Copy Prompt"}
-                        </button>
+                        <span className="text-[10px] font-bold tracking-widest uppercase text-textMuted">The AI Prompt</span>
+                        {selectedStyle.isFree && (
+                          <button 
+                            onClick={() => handleCopy(selectedStyle.prompt)}
+                            className="flex items-center gap-2 text-xs text-accent hover:text-white transition-colors"
+                          >
+                            {copied ? <Check size={14} /> : <Copy size={14} />}
+                            {copied ? "Copied" : "Copy Prompt"}
+                          </button>
+                        )}
                       </div>
-                      <div className={`text-sm leading-relaxed font-mono ${!selectedStyle.isFree ? "filter blur-sm select-none" : ""}`}>
+                      <div className={`text-sm leading-relaxed font-mono ${!selectedStyle.isFree ? "filter blur-sm select-none" : "text-textMain"}`}>
                         {selectedStyle.prompt}
                       </div>
+                      
                       {!selectedStyle.isFree && (
                         <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
-                          <div className="text-center p-6 glass rounded-2xl">
+                          <div className="text-center p-6 bg-surface/80 border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl">
                             <Lock className="mx-auto mb-3 text-accent" size={24} />
-                            <p className="font-bold mb-1">MEMBERS ONLY</p>
-                            <p className="text-xs text-gray-400 mb-4">Join to unlock the full 55-prompt vault.</p>
-                            <button className="w-full bg-accent text-background font-bold py-2 rounded-lg text-xs hover:brightness-110 transition-all">
-                              Unlock the Vault — $29
+                            <p className="font-bold mb-1 text-textMain">MEMBERS ONLY</p>
+                            <p className="text-xs text-textMuted mb-4">Join to unlock the full vault.</p>
+                            <button className="w-full bg-accent text-background font-bold py-2.5 px-6 rounded-lg text-xs hover:bg-accent-hover transition-all">
+                              Unlock Vault — $29
                             </button>
                           </div>
                         </div>
@@ -209,16 +281,16 @@ export default function Home() {
 
                 <div className="mt-8 pt-8 border-t border-white/5 flex gap-4">
                    <div className="flex-1 text-center">
-                      <p className="text-[10px] text-gray-500 uppercase font-bold mb-1">Stability</p>
-                      <p className="text-xs">High</p>
+                      <p className="text-[10px] text-textMuted uppercase font-bold mb-1 tracking-wider">Stability</p>
+                      <p className="text-xs text-textMain">High</p>
                    </div>
                    <div className="flex-1 text-center border-x border-white/5">
-                      <p className="text-[10px] text-gray-500 uppercase font-bold mb-1">Lighting</p>
-                      <p className="text-xs">Studio</p>
+                      <p className="text-[10px] text-textMuted uppercase font-bold mb-1 tracking-wider">Lighting</p>
+                      <p className="text-xs text-textMain">Studio</p>
                    </div>
                    <div className="flex-1 text-center">
-                      <p className="text-[10px] text-gray-500 uppercase font-bold mb-1">Aesthetic</p>
-                      <p className="text-xs">Premium</p>
+                      <p className="text-[10px] text-textMuted uppercase font-bold mb-1 tracking-wider">Aesthetic</p>
+                      <p className="text-xs text-textMain">Premium</p>
                    </div>
                 </div>
               </div>
@@ -226,6 +298,6 @@ export default function Home() {
           </div>
         )}
       </AnimatePresence>
-    </main>
+    </div>
   );
 }

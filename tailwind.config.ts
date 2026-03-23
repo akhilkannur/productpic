@@ -9,17 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A", // Obsidian
-        foreground: "#EDEDED",
+        background: '#0a0a0a',
+        surface: '#121212',
         accent: {
-          DEFAULT: "#D2B48C", // Travertine/Gold
-          muted: "#2F4F4F", // Slate
+          DEFAULT: 'rgb(210, 180, 140)',
+          hover: 'rgb(190, 160, 120)',
         },
+        textMain: '#f5f5f5',
+        textMuted: '#888888',
+        borderSubtle: 'rgba(255, 255, 255, 0.06)',
         card: "#121212",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },
