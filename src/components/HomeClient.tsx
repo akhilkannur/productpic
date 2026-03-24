@@ -18,19 +18,6 @@ interface Style {
   isFree: boolean;
 }
 
-const PILLAR_DESCRIPTIONS: Record<string, string> = {
-  "The Monolith (Architectural)": "Minimalist, structural, and expensive. Focus on stone textures, marble slabs, and sharp architectural sunlight.",
-  "The Nocturnal (Midnight)": "Dark, moody, and opulent. Focus on spotlighting, deep shadows, velvet, and glass reflections.",
-  "The Botanical (Organic)": "Soft, organic, and clean. Focus on 'Gobo' leaf shadows, morning light, and natural textures.",
-  "The Clinical (Functional)": "High-tech and sterile. Focus on frosted glass, high-key lighting, and precision-engineered clean aesthetics.",
-  "The Hard-Flash (Pop)": "Bold, aggressive, and commercial. Focus on direct strobe flash, sharp shadows, and saturated color pop.",
-  "The Atmospheric (FX)": "Moody and cinematic environments. Focus on volumetric fog, smoke, and complex light-beam physics.",
-  "The Ethereal (Glow)": "Soft, glowing highlights and dreamy depth. Focus on bloom, under-glow, and soft-focus physics.",
-  "The Refractive (Lab)": "Laboratory-grade lighting with prism effects. Focus on caustic reflections, rainbows, and dispersion.",
-  "The Industrial (Material)": "Raw and mechanical. Focus on brushed steel, concrete, and heavy-duty manufacturing aesthetics.",
-  "The Studio (Commercial)": "Standard high-end retail lighting. Focus on softbox rims, seamless backgrounds, and zero-distraction focus.",
-};
-
 export default function HomeClient({ styles }: { styles: Style[] }) {
   const [filter, setFilter] = useState("All");
   const [shapeFilter, setShapeFilter] = useState("All");
@@ -158,17 +145,17 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
     <>
       {/* Filter Bar */}
       <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-borderSubtle w-full">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 space-y-6">
-          <div className="flex flex-col xl:flex-row xl:items-start justify-between gap-8">
-            <div className="flex flex-col gap-5 flex-grow overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-4 md:py-8 space-y-4 md:space-y-6">
+          <div className="flex flex-col xl:flex-row xl:items-start justify-between gap-4 md:gap-8">
+            <div className="flex flex-col gap-4 md:gap-5 flex-grow overflow-hidden">
               {/* Pillar Filter */}
-              <div className="flex items-center gap-4 overflow-x-auto pb-1 scrollbar-hide">
-                <span className="shrink-0 text-[11px] font-bold tracking-widest uppercase text-textMuted mr-2">Scene:</span>
+              <div className="flex items-center gap-3 md:gap-4 overflow-x-auto pb-1 scrollbar-hide">
+                <span className="shrink-0 text-[10px] md:text-[11px] font-bold tracking-widest uppercase text-textMuted mr-1 md:mr-2">Scene:</span>
                 {pillars.map((pillar) => (
                   <button
                     key={pillar}
                     onClick={() => setFilter(pillar)}
-                    className={`shrink-0 px-5 py-2 rounded-full border text-sm transition-all whitespace-nowrap ${
+                    className={`shrink-0 px-4 md:px-5 py-1.5 md:py-2 rounded-full border text-xs transition-all whitespace-nowrap ${
                       filter === pillar
                         ? "border-accent bg-accent text-background font-semibold shadow-[0_0_15px_rgba(210,180,140,0.2)]"
                         : "border-borderSubtle hover:border-accent/40 hover:bg-surface text-textMuted hover:text-textMain font-medium"
@@ -180,13 +167,13 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
               </div>
 
               {/* Shape Filter */}
-              <div className="flex items-center gap-4 overflow-x-auto pb-1 scrollbar-hide">
-                <span className="shrink-0 text-[11px] font-bold tracking-widest uppercase text-textMuted mr-2">Shape:</span>
+              <div className="flex items-center gap-3 md:gap-4 overflow-x-auto pb-1 scrollbar-hide">
+                <span className="shrink-0 text-[10px] md:text-[11px] font-bold tracking-widest uppercase text-textMuted mr-1 md:mr-2">Shape:</span>
                 {shapes.map((shape) => (
                   <button
                     key={shape}
                     onClick={() => setShapeFilter(shape)}
-                    className={`shrink-0 px-5 py-2 rounded-full border text-sm transition-all whitespace-nowrap ${
+                    className={`shrink-0 px-4 md:px-5 py-1.5 md:py-2 rounded-full border text-xs transition-all whitespace-nowrap ${
                       shapeFilter === shape
                         ? "border-accent bg-accent text-background font-semibold shadow-[0_0_15px_rgba(210,180,140,0.2)]"
                         : "border-borderSubtle hover:border-accent/40 hover:bg-surface text-textMuted hover:text-textMain font-medium"
@@ -199,38 +186,21 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
             </div>
             
             {/* Interchangeability Note */}
-            <div className="shrink-0 flex items-start gap-4 p-4 rounded-2xl bg-accent/5 border border-accent/10 max-w-sm relative group overflow-hidden">
+            <div className="shrink-0 flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl md:rounded-2xl bg-accent/5 border border-accent/10 max-w-sm relative group overflow-hidden">
               <div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-50" />
-              <Sparkles className="text-accent shrink-0 mt-0.5" size={18} />
-              <p className="text-xs leading-relaxed text-textMuted font-medium italic">
-                <span className="text-accent font-bold uppercase tracking-tighter not-italic block mb-1">Expert Tip:</span>
-                Styles are fully <span className="text-textMain font-bold">Interchangeable</span>. A "Jar" prompt works flawlessly for Bottles or Cans.
+              <Sparkles className="text-accent shrink-0 mt-0.5" size={16} />
+              <p className="text-[11px] md:text-xs leading-relaxed text-textMuted font-medium italic">
+                <span className="text-accent font-bold uppercase tracking-tighter not-italic block mb-0.5 md:mb-1">Expert Tip:</span>
+                Styles are <span className="text-textMain font-bold">Interchangeable</span>. A "Jar" prompt works flawlessly for Bottles or Cans.
               </p>
             </div>
           </div>
-
-          {/* Description Bar */}
-          {filter !== "All" && PILLAR_DESCRIPTIONS[filter] && (
-             <motion.div 
-               initial={{ opacity: 0, y: -10 }} 
-               animate={{ opacity: 1, y: 0 }}
-               className="p-5 rounded-2xl bg-surface border border-white/5 flex items-center gap-5"
-             >
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                  <i className="ri-information-line text-accent text-xl" />
-                </div>
-                <p className="text-sm text-textMuted font-medium leading-relaxed max-w-4xl">
-                  <span className="text-textMain font-bold uppercase tracking-widest text-[10px] block mb-0.5 opacity-50">Style Aesthetic:</span>
-                  {PILLAR_DESCRIPTIONS[filter]}
-                </p>
-             </motion.div>
-          )}
         </div>
       </div>
 
       {/* Main Grid Content */}
-      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-12 w-full flex-grow">
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8">
+      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 md:py-12 w-full flex-grow">
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-8 space-y-4 md:space-y-8">
           {filteredStyles.map((style, idx) => (
             <motion.div
               key={style.id}
@@ -349,12 +319,6 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                 </div>
 
                 <div className="space-y-8 flex-grow">
-                  <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10 relative">
-                     <p className="text-sm text-textMuted font-medium leading-relaxed italic">
-                        "{PILLAR_DESCRIPTIONS[selectedStyle.pillar] || "Advanced lighting setup with technical shadow and texture control."}"
-                     </p>
-                  </div>
-
                   <div className="p-8 rounded-2xl bg-black/40 border border-white/5 relative group">
                     <div className="flex justify-between items-center mb-6">
                       <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-textMuted">The AI Prompt</span>

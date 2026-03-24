@@ -62,14 +62,14 @@ export default async function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-20 pb-12 w-full">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-12 md:pt-20 pb-10 md:pb-12 w-full">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9] text-textMain">
-            AI PRODUCT PHOTOGRAPHY.<br />
-            <span className="text-textMuted font-light italic">STUDIO QUALITY.</span> ZERO SETUP.
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter mb-6 md:mb-8 leading-[0.95] md:leading-[0.9] text-textMain uppercase">
+            AI IMAGE PROMPTS FOR<br />
+            <span className="text-accent underline decoration-2 md:decoration-4 underline-offset-4 md:underline-offset-8 text-balance">FOOD & BEVERAGE PRODUCTS.</span>
           </h1>
-          <p className="text-textMuted text-lg md:text-2xl leading-relaxed max-w-2xl font-medium tracking-tight">
-            100+ premium AI prompts for photorealistic food & beverage photography. $29 lifetime access. Works with Nano Banana & Midjourney.
+          <p className="text-textMuted text-base md:text-2xl leading-relaxed max-w-2xl font-medium tracking-tight">
+            Skip the expensive product shoot. 100+ AI prompts for Food & Beverage brands to get studio-grade photorealism in seconds.
           </p>
         </div>
       </section>
