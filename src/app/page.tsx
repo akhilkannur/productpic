@@ -63,10 +63,7 @@ export default async function Home() {
             <span className="font-medium text-lg text-textMain tracking-tight">ProductPhoto.pro</span>
           </div>
           <p className="text-textMuted text-sm font-light">© 2026 ProductPhoto.pro. All rights reserved.</p>
-          <div className="flex items-center gap-4 text-textMuted">
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><i className="ri-twitter-x-line text-xl"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><i className="ri-instagram-line text-xl"></i></a>
-          </div>
+
         </div>
       </footer>
     </div>

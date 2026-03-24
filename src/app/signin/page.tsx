@@ -83,9 +83,7 @@ export default function SignIn() {
           </form>
         )}
 
-        <p className="mt-12 text-xs text-textMuted">
-          By signing in, you agree to our Terms and Privacy Policy.
-        </p>
+
       </main>
 
       <footer className="w-full border-t border-borderSubtle bg-surface">
