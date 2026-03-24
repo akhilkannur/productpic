@@ -34,6 +34,7 @@ yarn-error.log*
 next-env.d.ts
 
 # project specific
+scripts/
 generate.log
 extract-data.js
 setup-masters.js
