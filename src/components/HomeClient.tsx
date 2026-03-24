@@ -175,7 +175,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
               onClick={() => setSelectedStyle(style)}
               className="group relative rounded-xl overflow-hidden bg-surface border border-borderSubtle hover:border-accent/30 transition-all duration-500 break-inside-avoid shadow-2xl shadow-black/50 cursor-pointer flex flex-col"
             >
-              <div className="relative w-full overflow-hidden aspect-[3/2]">
+              <div className="relative w-full overflow-hidden aspect-[3/4]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center">
                   <i className="ri-image-circle-line text-white/5 text-6xl"></i>
                 </div>
@@ -235,9 +235,24 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-5xl bg-surface border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
+              className="relative w-full max-w-5xl bg-surface border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] overflow-y-auto"
             >
-              <div className="md:w-1/2 aspect-[3/2] relative bg-background flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
+              {/* Mobile Header (Shown only on mobile) */}
+              <div className="p-6 pb-4 md:hidden flex justify-between items-start border-b border-white/5 bg-surface sticky top-0 z-30">
+                <div>
+                  <p className="text-accent font-mono text-[10px] mb-1 tracking-widest uppercase">{selectedStyle.pillar}</p>
+                  <h2 className="text-2xl font-bold tracking-tight leading-tight text-textMain">{selectedStyle.name}</h2>
+                </div>
+                <button 
+                  onClick={() => setSelectedStyle(null)}
+                  className="p-2 bg-white/5 rounded-full text-textMuted"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              {/* Image Section */}
+              <div className="md:w-1/2 aspect-[3/4] md:aspect-square relative bg-background flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
                 <Image 
                   src={selectedStyle.afterImage} 
                   alt={`${selectedStyle.name} AI product photo prompt`}
@@ -247,62 +262,56 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                   priority
                   quality={95}
                 />
-                <button 
-                  onClick={() => setSelectedStyle(null)}
-                  className="absolute top-4 right-4 md:hidden p-2 bg-black/50 backdrop-blur-md rounded-full text-white z-20"
-                >
-                  <X size={20} />
-                </button>
               </div>
 
-              <div className="md:w-1/2 p-8 flex flex-col justify-between">
-                <div>
-                  <div className="flex justify-between items-start mb-6">
-                    <div>
-                      <p className="text-accent font-mono text-xs mb-2 tracking-widest uppercase">{selectedStyle.pillar}</p>
-                      <h2 className="text-3xl font-bold tracking-tight leading-none mb-2 text-textMain">{selectedStyle.name}</h2>
-                      <p className="text-textMuted text-sm">Best for: {selectedStyle.category}</p>
-                    </div>
-                    <button 
-                      onClick={() => setSelectedStyle(null)}
-                      className="hidden md:block p-2 hover:bg-white/5 rounded-full transition-colors text-textMuted"
-                    >
-                      <X size={24} />
-                    </button>
+              {/* Content Section */}
+              <div className="md:w-1/2 p-6 md:p-8 flex flex-col">
+                {/* Desktop Header (Hidden on mobile) */}
+                <div className="hidden md:flex justify-between items-start mb-6">
+                  <div>
+                    <p className="text-accent font-mono text-xs mb-2 tracking-widest uppercase">{selectedStyle.pillar}</p>
+                    <h2 className="text-3xl font-bold tracking-tight leading-none mb-2 text-textMain">{selectedStyle.name}</h2>
+                    <p className="text-textMuted text-sm">Best for: {selectedStyle.category}</p>
                   </div>
+                  <button 
+                    onClick={() => setSelectedStyle(null)}
+                    className="p-2 hover:bg-white/5 rounded-full transition-colors text-textMuted"
+                  >
+                    <X size={24} />
+                  </button>
+                </div>
 
-                  <div className="space-y-6">
-                    <div className="p-6 rounded-2xl bg-black/40 border border-white/5 relative group">
-                      <div className="flex justify-between items-center mb-4">
-                        <span className="text-[10px] font-bold tracking-widest uppercase text-textMuted">The AI Prompt</span>
-                        {canViewPrompt(selectedStyle) && (
-                          <button 
-                            onClick={() => handleCopy(selectedStyle.prompt)}
-                            className="flex items-center gap-2 text-xs text-accent hover:text-white transition-colors"
-                          >
-                            {copied ? <Check size={14} /> : <Copy size={14} />}
-                            {copied ? "Copied" : "Copy Prompt"}
-                          </button>
-                        )}
-                      </div>
-                      <div className={`text-sm leading-relaxed font-mono ${!canViewPrompt(selectedStyle) ? "filter blur-sm select-none" : "text-textMain"}`}>
-                        {selectedStyle.prompt}
-                      </div>
-
+                <div className="space-y-6">
+                  <div className="p-6 rounded-2xl bg-black/40 border border-white/5 relative group">
+                    <div className="flex justify-between items-center mb-4">
+                      <span className="text-[10px] font-bold tracking-widest uppercase text-textMuted">The AI Prompt</span>
                       {canViewPrompt(selectedStyle) && (
-                        <div className="mt-6 p-4 rounded-xl bg-accent/5 border border-accent/10 flex items-start gap-3">
-                          <div className="mt-0.5 text-accent">
-                            <Sparkles size={16} />
-                          </div>
-                          <div className="text-[11px] leading-relaxed text-textMuted uppercase tracking-wider font-medium">
-                            <span className="text-accent">Nano Banana/Midjourney Pro Tip:</span> Using the reference photo above as a **Multimodal Anchor** (Nano Banana) or an **--sref** (Midjourney) will drastically improve lighting and shadow physics. 
-                            <span className="block mt-1 opacity-60 text-[9px] italic">AI results are probabilistic. These prompts are tuned for studio-grade realism but results depend on the quality of your source upload.</span>
-                          </div>
-                        </div>
+                        <button 
+                          onClick={() => handleCopy(selectedStyle.prompt)}
+                          className="flex items-center gap-2 text-xs text-accent hover:text-white transition-colors"
+                        >
+                          {copied ? <Check size={14} /> : <Copy size={14} />}
+                          {copied ? "Copied" : "Copy Prompt"}
+                        </button>
                       )}
-                      
-                      {renderLockOverlay(selectedStyle)}
                     </div>
+                    <div className={`text-sm leading-relaxed font-mono ${!canViewPrompt(selectedStyle) ? "filter blur-sm select-none" : "text-textMain"}`}>
+                      {selectedStyle.prompt}
+                    </div>
+
+                    {canViewPrompt(selectedStyle) && (
+                      <div className="mt-6 p-4 rounded-xl bg-accent/5 border border-accent/10 flex items-start gap-3">
+                        <div className="mt-0.5 text-accent">
+                          <Sparkles size={16} />
+                        </div>
+                        <div className="text-[11px] leading-relaxed text-textMuted uppercase tracking-wider font-medium">
+                          <span className="text-accent">Nano Banana/Midjourney Pro Tip:</span> Using the reference photo above as a **Multimodal Anchor** (Nano Banana) or an **--sref** (Midjourney) will drastically improve lighting and shadow physics. 
+                          <span className="block mt-1 opacity-60 text-[9px] italic">AI results are probabilistic. These prompts are tuned for studio-grade realism but results depend on the quality of your source upload.</span>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {renderLockOverlay(selectedStyle)}
                   </div>
                 </div>
               </div>
