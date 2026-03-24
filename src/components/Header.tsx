@@ -2,9 +2,31 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import { supabase } from "@/lib/supabase";
 
 export default function Header() {
   const pathname = usePathname();
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  useEffect(() => {
+    async function checkSession() {
+      const { data: { session } } = await supabase.auth.getSession();
+      setIsSignedIn(!!session?.user);
+    }
+    checkSession();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsSignedIn(!!session?.user);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    window.location.href = "/";
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-borderSubtle bg-background/80 backdrop-blur-xl">
@@ -31,16 +53,24 @@ export default function Header() {
           >
             How it Works
           </Link>
-          {/* Mockup placeholders removed for now to keep it clean */}
         </nav>
 
         <div className="flex items-center gap-5">
-          <Link 
-            href="/signin" 
-            className="text-sm font-medium text-textMuted hover:text-textMain transition-colors hidden sm:block"
-          >
-            Sign In
-          </Link>
+          {isSignedIn ? (
+            <button 
+              onClick={handleSignOut}
+              className="text-sm font-medium text-textMuted hover:text-textMain transition-colors hidden sm:block"
+            >
+              Sign Out
+            </button>
+          ) : (
+            <Link 
+              href="/signin" 
+              className="text-sm font-medium text-textMuted hover:text-textMain transition-colors hidden sm:block"
+            >
+              Sign In
+            </Link>
+          )}
           <Link 
             href="https://checkout.dodopayments.com/buy/pdt_0Nb6DxNGX1dZxvAqv6u9o?quantity=1"
             target="_blank"

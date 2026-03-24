@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { supabase } from "@/lib/supabase";
-import { Lock, Copy, Check, X, Sparkles } from "lucide-react";
+import { Lock, Copy, Check, X, Sparkles, LogIn } from "lucide-react";
 
 interface Style {
   id: string;
@@ -20,12 +21,14 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
   const [filter, setFilter] = useState("All");
   const [selectedStyle, setSelectedStyle] = useState<Style | null>(null);
   const [copied, setCopied] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
 
   useEffect(() => {
     async function checkAccess() {
       const { data: { session } } = await supabase.auth.getSession();
       if (session?.user) {
+        setIsSignedIn(true);
         const { data: profile } = await supabase
           .from('profiles')
           .select('has_access')
@@ -35,6 +38,15 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
       }
     }
     checkAccess();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsSignedIn(!!session?.user);
+      if (!session?.user) {
+        setHasAccess(false);
+      }
+    });
+
+    return () => subscription.unsubscribe();
   }, []);
 
   const pillars = ["All", ...Array.from(new Set(styles.map((s) => s.pillar)))];
@@ -47,6 +59,83 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  // Can the user see this prompt?
+  const canViewPrompt = (style: Style) => {
+    if (hasAccess) return true;
+    if (style.isFree && isSignedIn) return true;
+    return false;
+  };
+
+  // What lock message to show?
+  const renderLockOverlay = (style: Style) => {
+    if (canViewPrompt(style)) return null;
+
+    // Free prompt but not signed in → sign up CTA
+    if (style.isFree && !isSignedIn) {
+      return (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
+          <div className="text-center p-6 bg-surface/80 border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl">
+            <LogIn className="mx-auto mb-3 text-accent" size={24} />
+            <p className="font-bold mb-1 text-textMain">FREE PROMPT</p>
+            <p className="text-xs text-textMuted mb-4">Sign up to unlock free prompts.</p>
+            <Link
+              href="/signin"
+              className="block w-full bg-accent text-background text-center font-bold py-2.5 px-6 rounded-lg text-xs hover:bg-accent-hover transition-all"
+            >
+              Sign Up Free
+            </Link>
+          </div>
+        </div>
+      );
+    }
+
+    // Paid prompt → buy CTA
+    return (
+      <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
+        <div className="text-center p-6 bg-surface/80 border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl">
+          <Lock className="mx-auto mb-3 text-accent" size={24} />
+          <p className="font-bold mb-1 text-textMain">MEMBERS ONLY</p>
+          <p className="text-xs text-textMuted mb-4">Lifetime access + monthly updates.</p>
+          <a 
+            href="https://checkout.dodopayments.com/buy/pdt_0Nb6DxNGX1dZxvAqv6u9o?quantity=1"
+            target="_blank"
+            className="block w-full bg-accent text-background text-center font-bold py-2.5 px-6 rounded-lg text-xs hover:bg-accent-hover transition-all"
+          >
+            Unlock Vault $29
+          </a>
+          <p className="text-[10px] text-textMuted mt-2">Lifetime price for first 50 users</p>
+        </div>
+      </div>
+    );
+  };
+
+  // Card hover overlay
+  const renderCardOverlay = (style: Style) => {
+    if (canViewPrompt(style)) return null;
+
+    // Free prompt, not signed in
+    if (style.isFree && !isSignedIn) {
+      return (
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-20 backdrop-blur-[2px] pointer-events-none">
+          <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+            <LogIn className="text-accent" size={24} />
+          </div>
+          <span className="text-white font-medium text-sm tracking-wide translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 ease-out">Sign Up to Unlock</span>
+        </div>
+      );
+    }
+
+    // Paid prompt, locked
+    return (
+      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-20 backdrop-blur-[2px] pointer-events-none">
+        <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+          <i className="ri-lock-2-fill text-accent text-2xl drop-shadow-[0_0_8px_rgba(210,180,140,0.5)]"></i>
+        </div>
+        <span className="text-white font-medium text-sm tracking-wide translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 ease-out">Unlock Prompt</span>
+      </div>
+    );
   };
 
   return (
@@ -96,14 +185,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                   className="relative z-10 object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                 />
 
-                {(!style.isFree && !hasAccess) && (
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-20 backdrop-blur-[2px] pointer-events-none">
-                    <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                      <i className="ri-lock-2-fill text-accent text-2xl drop-shadow-[0_0_8px_rgba(210,180,140,0.5)]"></i>
-                    </div>
-                    <span className="text-white font-medium text-sm tracking-wide translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 ease-out">Unlock Prompt</span>
-                  </div>
-                )}
+                {renderCardOverlay(style)}
                 
                 {style.isFree && (
                   <div className="absolute top-4 right-4 z-30">
@@ -180,7 +262,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                     <div className="p-6 rounded-2xl bg-black/40 border border-white/5 relative group">
                       <div className="flex justify-between items-center mb-4">
                         <span className="text-[10px] font-bold tracking-widest uppercase text-textMuted">The AI Prompt</span>
-                        {(selectedStyle.isFree || hasAccess) && (
+                        {canViewPrompt(selectedStyle) && (
                           <button 
                             onClick={() => handleCopy(selectedStyle.prompt)}
                             className="flex items-center gap-2 text-xs text-accent hover:text-white transition-colors"
@@ -190,39 +272,23 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                           </button>
                         )}
                       </div>
-                      <div className={`text-sm leading-relaxed font-mono ${(!selectedStyle.isFree && !hasAccess) ? "filter blur-sm select-none" : "text-textMain"}`}>
+                      <div className={`text-sm leading-relaxed font-mono ${!canViewPrompt(selectedStyle) ? "filter blur-sm select-none" : "text-textMain"}`}>
                         {selectedStyle.prompt}
                       </div>
 
-                      {(selectedStyle.isFree || hasAccess) && (
+                      {canViewPrompt(selectedStyle) && (
                         <div className="mt-6 p-4 rounded-xl bg-accent/5 border border-accent/10 flex items-start gap-3">
                           <div className="mt-0.5 text-accent">
                             <Sparkles size={16} />
                           </div>
                           <div className="text-[11px] leading-relaxed text-textMuted uppercase tracking-wider font-medium">
-                            <span className="text-accent">Gemini/Midjourney Pro Tip:</span> Using the reference photo above as a **Multimodal Anchor** (Gemini 2.0) or an **--sref** (Midjourney) will drastically improve lighting and shadow physics. 
+                            <span className="text-accent">Nano Banana/Midjourney Pro Tip:</span> Using the reference photo above as a **Multimodal Anchor** (Nano Banana) or an **--sref** (Midjourney) will drastically improve lighting and shadow physics. 
                             <span className="block mt-1 opacity-60 text-[9px] italic">AI results are probabilistic. These prompts are tuned for studio-grade realism but results depend on the quality of your source upload.</span>
                           </div>
                         </div>
                       )}
                       
-                      {(!selectedStyle.isFree && !hasAccess) && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
-                          <div className="text-center p-6 bg-surface/80 border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl">
-                            <Lock className="mx-auto mb-3 text-accent" size={24} />
-                            <p className="font-bold mb-1 text-textMain">MEMBERS ONLY</p>
-                            <p className="text-xs text-textMuted mb-4">Lifetime access + monthly updates.</p>
-                            <a 
-                              href="https://checkout.dodopayments.com/buy/pdt_0Nb6DxNGX1dZxvAqv6u9o?quantity=1"
-                              target="_blank"
-                              className="block w-full bg-accent text-background text-center font-bold py-2.5 px-6 rounded-lg text-xs hover:bg-accent-hover transition-all"
-                            >
-                              Unlock Vault $29
-                            </a>
-                            <p className="text-[10px] text-textMuted mt-2">Lifetime price for first 50 users</p>
-                          </div>
-                        </div>
-                      )}
+                      {renderLockOverlay(selectedStyle)}
                     </div>
                   </div>
                 </div>

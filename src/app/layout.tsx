@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | ProductPhoto.pro",
   },
   description:
-    "55+ studio-grade AI prompts for photorealistic food & beverage product photography. $29 lifetime access for first 50 users. Includes monthly prompt updates. Works with Gemini & Midjourney.",
+    "100+ studio-grade AI prompts for photorealistic food & beverage product photography. $29 lifetime access for first 50 users. Includes monthly prompt updates. Works with Nano Banana & Midjourney.",
   keywords: [
     "AI product photography",
     "product photo prompts",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "food and beverage product photos",
     "AI photo prompts",
     "product photography prompts",
-    "Gemini image prompts",
+    "Nano Banana prompts",
     "Midjourney product photo",
     "CPG product photography",
   ],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "ProductPhoto.pro",
     title: "ProductPhoto.pro | AI Product Photography Prompts for DTC Brands",
     description:
-      "55+ studio-grade AI prompts for photorealistic food & beverage product photography. Built for DTC brands.",
+      "100+ studio-grade AI prompts for photorealistic food & beverage product photography. Built for DTC brands.",
     images: [
       {
         url: `${siteUrl}/og-image.png`,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ProductPhoto.pro | AI Product Photography Prompts",
     description:
-      "55+ AI prompts for photorealistic food & beverage product photography. Built for DTC brands.",
+      "100+ AI prompts for photorealistic food & beverage product photography. Built for DTC brands.",
     images: [`${siteUrl}/og-image.png`],
   },
   robots: {
@@ -94,7 +94,7 @@ gtag('config', 'G-9BRP897VP3');`,
               "@type": "Product",
               name: "ProductPhoto.pro | AI Product Photography Prompt Library",
               description:
-                "55+ studio-grade AI prompts for photorealistic food & beverage product photography for DTC brands.",
+                "100+ studio-grade AI prompts for photorealistic food & beverage product photography for DTC brands.",
               brand: { "@type": "Brand", name: "ProductPhoto.pro" },
               offers: {
                 "@type": "Offer",

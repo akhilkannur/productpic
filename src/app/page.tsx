@@ -46,7 +46,7 @@ export default async function Home() {
             <span className="text-textMuted font-light">Studio Quality. Zero Setup.</span>
           </h1>
           <p className="text-textMuted text-lg md:text-xl leading-relaxed max-w-2xl font-light">
-            55+ studio-grade AI prompts for photorealistic food & beverage product photography. $29 lifetime access for first 50 users. Includes monthly prompt updates. Works with Gemini & Midjourney.
+            100+ studio-grade AI prompts for photorealistic food & beverage product photography. $29 lifetime access for first 50 users. Includes monthly prompt updates. Works with Nano Banana & Midjourney.
           </p>
         </div>
       </section>

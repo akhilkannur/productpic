@@ -22,7 +22,7 @@ export default function HowItWorks() {
       id: "03",
       title: "UPLOAD & CONFIGURE",
       description: "Upload your raw product photo. For best results, also upload the StyleVault reference photo from this site to 'anchor' the lighting.",
-      note: "Make sure you're on 'Thinking' or 'Pro' mode and click 'Create Images'.",
+      note: "Select a Nano Banana image model (Nano Banana 2 or Nano Banana Pro) and click 'Create Images'.",
       icon: <Box className="text-accent" size={24} />
     },
     {
@@ -95,7 +95,7 @@ export default function HowItWorks() {
                 <Sparkles size={18} className="text-accent" /> Model Updates
               </h3>
               <p className="text-textMuted text-sm font-light leading-relaxed">
-                Gemini updates their models frequently. As of March 2026, the engine is using <strong>Nano Banana 2</strong>. Our prompts are tuned for this specific version to ensure rim lighting and caustic physics remain consistent.
+                Google updates their image models frequently. As of March 2026, the default is <strong>Nano Banana 2</strong> (Gemini 3.1 Flash Image). For higher fidelity, use <strong>Nano Banana Pro</strong> (Gemini 3 Pro Image). Our prompts are tuned for these versions to ensure rim lighting and caustic physics remain consistent.
               </p>
             </div>
 
@@ -113,11 +113,11 @@ export default function HowItWorks() {
                 <Box size={18} className="text-accent" /> Daily Usage Limits
               </h3>
               <p className="text-textMuted text-sm font-light leading-relaxed">
-                Google limits high-quality multimodal generations per 24-hour cycle:
+                Google limits image generations per 24-hour cycle. Resets at midnight Pacific Time:
                 <br /><br />
-                • Pro Users: ~20-40 images.<br />
-                • Free Users: ~5-15 images.<br /><br />
-                If quality suddenly drops or images become "flat," you have hit your daily limit.
+                • Free Users: ~20 images/day with Nano Banana 2.<br />
+                • AI Pro ($19.99/mo): 50-1,000 images/day.<br /><br />
+                If quality suddenly drops or images become "flat," you have likely hit your daily limit.
               </p>
             </div>
 
@@ -147,7 +147,7 @@ export default function HowItWorks() {
               <Mail size={18} />
             </div>
             <span className="font-mono text-lg text-accent border-b border-accent/20 group-hover:border-accent transition-all">
-              PROMPTMVSTR@GMAIL.COM
+              AKHIL@LISNAGENCY.ONLINE
             </span>
           </div>
         </section>
