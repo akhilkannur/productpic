@@ -29,54 +29,54 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-borderSubtle bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b-2 border-black bg-white">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 cursor-pointer group">
-          <div className="w-8 h-8 rounded bg-accent flex items-center justify-center text-background">
+          <div className="w-8 h-8 bg-black flex items-center justify-center text-white">
             <i className="ri-camera-lens-fill text-xl"></i>
           </div>
-          <span className="font-bold text-2xl tracking-tight text-textMain group-hover:opacity-80 transition-opacity">
+          <span className="font-black text-2xl tracking-tighter text-black uppercase group-hover:opacity-80 transition-opacity">
             ProductPhoto<span className="text-accent">.pro</span>
           </span>
         </Link>
         
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-textMuted">
+        <nav className="hidden md:flex items-center gap-8 text-[11px] font-black uppercase tracking-widest text-gray-400">
           <Link 
             href="/" 
-            className={`transition-colors hover:text-textMain ${pathname === "/" ? "text-textMain hover:text-accent" : "hover:text-textMain"}`}
+            className={`transition-colors hover:text-black ${pathname === "/" ? "text-black border-b-2 border-accent" : ""}`}
           >
-            Gallery
+            Gallery_Index
           </Link>
           <Link 
             href="/how-it-works" 
-            className={`transition-colors hover:text-textMain ${pathname === "/how-it-works" ? "text-textMain hover:text-accent" : "hover:text-textMain"}`}
+            className={`transition-colors hover:text-black ${pathname === "/how-it-works" ? "text-black border-b-2 border-accent" : ""}`}
           >
-            How it Works
+            User_Manual
           </Link>
         </nav>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-6">
           {isSignedIn ? (
             <button 
               onClick={handleSignOut}
-              className="text-sm font-medium text-textMuted hover:text-textMain transition-colors hidden sm:block"
+              className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-black transition-colors hidden sm:block"
             >
-              Sign Out
+              Sign_Out
             </button>
           ) : (
             <Link 
               href="/signin" 
-              className="text-sm font-medium text-textMuted hover:text-textMain transition-colors hidden sm:block"
+              className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-black transition-colors hidden sm:block"
             >
-              Sign In / Up
+              Auth_Login
             </Link>
           )}
           <Link 
             href="https://checkout.dodopayments.com/buy/pdt_0Nb6DxNGX1dZxvAqv6u9o?quantity=1"
             target="_blank"
-            className="bg-accent text-background px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-accent-hover transition-colors shadow-[0_0_15px_rgba(210,180,140,0.15)]"
+            className="bg-black text-white px-5 py-2.5 text-[10px] font-black uppercase tracking-widest hover:bg-accent transition-all shadow-[4px_4px_0px_#FF4500] active:translate-x-1 active:translate-y-1 active:shadow-none"
           >
-            Get Lifetime Access $29
+            Unlock_Vault_$29
           </Link>
         </div>
       </div>
