@@ -19,7 +19,7 @@ async function getStyles() {
     return [];
   }
 
-  return data.map((item: any) => ({
+  const mappedStyles = data.map((item: any) => ({
     id: item.id,
     name: item.name,
     pillar: item.pillar,
@@ -29,6 +29,29 @@ async function getStyles() {
     afterImage: item.after_image,
     isFree: item.is_free,
   }));
+
+  const freeStyles = mappedStyles.filter((s: any) => s.isFree);
+  const paidStyles = mappedStyles.filter((s: any) => !s.isFree);
+
+  // Disperse free styles every ~6 items
+  const dispersedStyles: any[] = [];
+  const totalCount = mappedStyles.length;
+  // Use a fixed interval or calculate based on current density
+  const freeInterval = Math.max(2, Math.floor(totalCount / (freeStyles.length || 1)));
+  
+  let freeIdx = 0;
+  let paidIdx = 0;
+
+  for (let i = 0; i < totalCount; i++) {
+    // If we have free styles and hit the interval, or we are out of paid styles
+    if ((i % freeInterval === 0 && freeIdx < freeStyles.length) || (paidIdx >= paidStyles.length && freeIdx < freeStyles.length)) {
+      dispersedStyles.push(freeStyles[freeIdx++]);
+    } else if (paidIdx < paidStyles.length) {
+      dispersedStyles.push(paidStyles[paidIdx++]);
+    }
+  }
+
+  return dispersedStyles;
 }
 
 export default async function Home() {

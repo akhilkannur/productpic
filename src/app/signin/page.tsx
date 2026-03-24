@@ -39,11 +39,11 @@ export default function SignIn() {
         </div>
         
         <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter text-textMain">
-          Sign In <span className="text-textMuted font-light">to Vault.</span>
+          Sign In / Up <span className="text-textMuted font-light">to Vault.</span>
         </h1>
         
         <p className="text-textMuted text-lg mb-10 font-light max-w-sm mx-auto">
-          We'll send a secure magic link to your email to sign you in instantly. No passwords required.
+          We'll send a secure magic link to your email to sign you in or create an account instantly. No passwords required.
         </p>
 
         {success ? (

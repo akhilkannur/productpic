@@ -68,7 +68,7 @@ export default function Header() {
               href="/signin" 
               className="text-sm font-medium text-textMuted hover:text-textMain transition-colors hidden sm:block"
             >
-              Sign In
+              Sign In / Up
             </Link>
           )}
           <Link 
