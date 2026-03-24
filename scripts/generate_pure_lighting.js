@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config({ path: '.env.local' });
 
 // Use the key from env or the fallback provided in the original script
-const API_KEY = process.env.GEMINI_API_KEY || "AIzaSyCD5WHzJzQJn2ZWoD63-G9OG8yf8g0UpBA";
+const API_KEY = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenAI(API_KEY);
 
 const PILLARS = {

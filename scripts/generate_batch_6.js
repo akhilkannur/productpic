@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 
 dotenv.config({ path: '.env.local' });
 
-const API_KEY = process.env.GEMINI_API_KEY || "AIzaSyCD5WHzJzQJn2ZWoD63-G9OG8yf8g0UpBA";
+const API_KEY = process.env.GEMINI_API_KEY;
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 
 const batch6Styles = [
