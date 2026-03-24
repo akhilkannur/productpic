@@ -58,20 +58,18 @@ export default async function Home() {
   const styles = await getStyles();
 
   return (
-    <div className="font-mono antialiased min-h-screen flex flex-col selection:bg-accent selection:text-white w-full h-full bg-[#B0B0B0]">
+    <div className="font-sans antialiased min-h-screen flex flex-col selection:bg-accent selection:text-black w-full h-full bg-background">
       <Header />
 
       {/* Hero Section */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-16 pb-12 w-full">
-        <div className="max-w-3xl">
-          <div className="inline-block bg-black text-white px-3 py-1 text-[11px] font-black uppercase tracking-widest mb-6">OPERATIONAL_PROTOCOL_V.1.0</div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[0.9] text-black uppercase">
-            STUDIO_GRADE.<br />
-            ZERO_SETUP.<br />
-            <span className="text-accent underline decoration-4 underline-offset-8">AI_PROMPTS.</span>
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-20 pb-12 w-full">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9] text-textMain">
+            AI PRODUCT PHOTOGRAPHY.<br />
+            <span className="text-textMuted font-light italic">STUDIO QUALITY.</span> ZERO SETUP.
           </h1>
-          <p className="text-gray-800 text-lg md:text-xl leading-relaxed max-w-2xl font-bold uppercase tracking-tight">
-            100+ precision-engineered prompts for photorealistic food & beverage product photography. $29 lifetime access. works with nano banana & midjourney.
+          <p className="text-textMuted text-lg md:text-2xl leading-relaxed max-w-2xl font-medium tracking-tight">
+            100+ premium AI prompts for photorealistic food & beverage photography. $29 lifetime access. Works with Nano Banana & Midjourney.
           </p>
         </div>
       </section>
@@ -79,18 +77,15 @@ export default async function Home() {
       <HomeClient styles={styles} />
 
       {/* Footer */}
-      <footer className="w-full border-t-2 border-black bg-white mt-auto">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
+      <footer className="w-full border-t border-borderSubtle bg-surface mt-auto">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-black flex items-center justify-center text-white">
+            <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center text-background">
               <i className="ri-camera-lens-fill text-xl"></i>
             </div>
-            <span className="font-black text-2xl tracking-tighter text-black uppercase">ProductPhoto<span className="text-accent">.pro</span></span>
+            <span className="font-bold text-2xl tracking-tighter text-textMain">ProductPhoto<span className="text-accent">.pro</span></span>
           </div>
-          <div className="flex flex-col items-center md:items-end gap-2">
-            <p className="text-gray-400 text-[10px] font-black uppercase tracking-widest">© 2026_EST. PRODUCTPHOTO_PRO. ALL_RIGHTS_RESERVED.</p>
-            <div className="text-[10px] text-accent font-black uppercase tracking-widest">SYSTEM_STABLE_VER_2.5</div>
-          </div>
+          <p className="text-textMuted text-xs font-medium uppercase tracking-[0.2em]">© 2026 ProductPhoto.pro. All rights reserved.</p>
         </div>
       </footer>
     </div>

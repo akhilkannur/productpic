@@ -3,24 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #B0B0B0; /* 18% Gray Card */
-  --foreground: #0A0A0A;
-  --surface: #FFFFFF;
-  --accent: #FF4500; /* Safety Orange */
-  --accent-hover: #E03E00;
-  --border-subtle: #808080;
-  --text-main: #0A0A0A;
-  --text-muted: #4A4A4A;
+  --background: #0A0A0A;
+  --foreground: #EDEDED;
+  --surface: #111111;
+  --accent: #D2B48C; /* Original Tan/Gold for luxury feel */
+  --accent-hover: #C1A37B;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text-main: #FFFFFF;
+  --text-muted: #A0A0A0;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  background-image: 
-    linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,.05) 1px, transparent 1px);
-  background-size: 20px 20px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', sans-serif;
 }
 
 @layer utilities {
@@ -30,41 +26,21 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.film-slide {
-  border: 12px solid #050505;
-  box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+.style-card {
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gaffer-tape {
-  background: #39FF14; /* Neon Gaffer Green */
-  color: #000;
-  padding: 2px 8px;
-  transform: rotate(-2deg);
-  box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 10px;
-}
-
-.gaffer-tape-orange {
-  background: #FF4500;
-  color: #fff;
-  padding: 2px 8px;
-  transform: rotate(1deg);
-  box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 10px;
-}
-
-.stamped-label {
-  font-family: 'JetBrains Mono', monospace;
-  letter-spacing: -0.02em;
+.style-card:hover {
+  border-color: rgba(210, 180, 140, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .scrollbar-hide::-webkit-scrollbar {
