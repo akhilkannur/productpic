@@ -35,6 +35,7 @@ next-env.d.ts
 
 # project specific
 scripts/
+new_styles_to_generate.json
 generate.log
 extract-data.js
 setup-masters.js
