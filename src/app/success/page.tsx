@@ -36,7 +36,7 @@ export default function Success() {
 
       <footer className="w-full border-t border-borderSubtle bg-surface">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-textMuted text-sm font-light">
-          <p>© 2024 ProductPic.pro. All rights reserved.</p>
+          <p>© 2026 ProductPhoto.pro. All rights reserved.</p>
         </div>
       </footer>
     </div>

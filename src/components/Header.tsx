@@ -14,7 +14,7 @@ export default function Header() {
             <i className="ri-camera-lens-fill text-xl"></i>
           </div>
           <span className="font-bold text-2xl tracking-tight text-textMain group-hover:opacity-80 transition-opacity">
-            ProductPic<span className="text-accent">.pro</span>
+            ProductPhoto<span className="text-accent">.pro</span>
           </span>
         </Link>
         
@@ -46,7 +46,7 @@ export default function Header() {
             target="_blank"
             className="bg-accent text-background px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-accent-hover transition-colors shadow-[0_0_15px_rgba(210,180,140,0.15)]"
           >
-            Get Access
+            Get Lifetime Access $29
           </Link>
         </div>
       </div>

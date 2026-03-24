@@ -15,7 +15,7 @@ export default function HowItWorks() {
     {
       id: "02",
       title: "COPY THE PROMPT",
-      description: "Copy the studio-tuned logic block from ProductPic.pro and paste it into the Gemini chat box.",
+      description: "Copy the studio-tuned logic block from ProductPhoto.pro and paste it into the Gemini chat box.",
       icon: <Layers className="text-accent" size={24} />
     },
     {
@@ -46,7 +46,7 @@ export default function HowItWorks() {
             <span className="text-textMuted font-light">for AI-Native Operators.</span>
           </h1>
           <p className="text-textMuted text-lg leading-relaxed max-w-3xl font-light">
-            ProductPic.pro is a curated library of premium AI prompts focused on **DTC Product Photography**. We capture high-end architectural shadows, organic wellness lighting, and aggressive hard-flash aesthetics. Members unlock the exact prompt and lighting geometry used to build every shot.
+            ProductPhoto.pro is a curated library of premium AI product photography prompts for **DTC & e-commerce brands**. We capture high-end architectural shadows, organic wellness lighting, and aggressive hard-flash aesthetics. Members unlock the exact prompt and lighting geometry used to build every shot.
           </p>
         </section>
 
@@ -156,7 +156,7 @@ export default function HowItWorks() {
       {/* Footer */}
       <footer className="w-full border-t border-borderSubtle bg-surface mt-auto">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-textMuted text-sm font-light">
-          <p>© 2024 ProductPic.pro. All rights reserved.</p>
+          <p>© 2026 ProductPhoto.pro. All rights reserved.</p>
         </div>
       </footer>
     </div>
