@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { Lock, Copy, Check, X, Sparkles, LogIn } from "lucide-react";
 
@@ -174,15 +175,19 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
               onClick={() => setSelectedStyle(style)}
               className="group relative rounded-xl overflow-hidden bg-surface border border-borderSubtle hover:border-accent/30 transition-all duration-500 break-inside-avoid shadow-2xl shadow-black/50 cursor-pointer flex flex-col"
             >
-              <div className="relative w-full overflow-hidden aspect-[3/4]">
+              <div className="relative w-full overflow-hidden aspect-[3/2]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center">
                   <i className="ri-image-circle-line text-white/5 text-6xl"></i>
                 </div>
                 
-                <img 
+                <Image 
                   src={style.afterImage} 
                   alt={`${style.name} AI product photo prompt`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   className="relative z-10 object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                  priority={idx < 8}
+                  quality={90}
                 />
 
                 {renderCardOverlay(style)}
@@ -232,8 +237,16 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               className="relative w-full max-w-5xl bg-surface border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
             >
-              <div className="md:w-1/2 aspect-square relative bg-background flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
-                <img src={selectedStyle.afterImage} className="relative z-10 object-contain w-full h-full" alt={`${selectedStyle.name} AI product photo prompt`} />
+              <div className="md:w-1/2 aspect-[3/2] relative bg-background flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
+                <Image 
+                  src={selectedStyle.afterImage} 
+                  alt={`${selectedStyle.name} AI product photo prompt`}
+                  fill
+                  className="relative z-10 object-contain w-full h-full" 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                  quality={95}
+                />
                 <button 
                   onClick={() => setSelectedStyle(null)}
                   className="absolute top-4 right-4 md:hidden p-2 bg-black/50 backdrop-blur-md rounded-full text-white z-20"
