@@ -56,7 +56,7 @@ export default function StyleDetail({ style, onClose }: StyleDetailProps) {
             <p className="font-bold mb-1 text-textMain tracking-tight text-lg">FREE PROMPT</p>
             <p className="text-sm text-textMuted mb-6 font-medium">Sign up to unlock prompts.</p>
             <Link
-              href="/signin"
+              href="https://www.productphoto.pro/signin"
               className="block w-full bg-accent text-background text-center font-bold py-3 px-8 rounded-xl hover:bg-accent-hover transition-all"
             >
               Sign Up Free

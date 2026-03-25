@@ -45,3 +45,7 @@ generate-image.js
 !/public/library/
 !/public/master-assets/
 
+
+# Indexing
+indexing-key.json
+.indexing-submitted.json
