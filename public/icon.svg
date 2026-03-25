@@ -1,0 +1,70 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#8A6B44"></stop>
+            <stop offset="25%" stop-color="#E8D4BE"></stop>
+            <stop offset="50%" stop-color="#D2B48C"></stop>
+            <stop offset="85%" stop-color="#B39164"></stop>
+            <stop offset="100%" stop-color="#8A6B44"></stop>
+        </linearGradient>
+
+        <linearGradient id="lensOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF"></stop>
+            <stop offset="40%" stop-color="#E8D4BE"></stop>
+            <stop offset="70%" stop-color="#D2B48C"></stop>
+            <stop offset="100%" stop-color="#8A6B44"></stop>
+        </linearGradient>
+
+        <linearGradient id="lensInner" x1="100%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#F5EBE1"></stop>
+            <stop offset="50%" stop-color="#B39164"></stop>
+            <stop offset="100%" stop-color="#6E5638"></stop>
+        </linearGradient>
+
+        <linearGradient id="lensDeep" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4A3620"></stop>
+            <stop offset="100%" stop-color="#B39164"></stop>
+        </linearGradient>
+
+        <radialGradient id="irisGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#1A1108"></stop>
+            <stop offset="70%" stop-color="#2D1F12"></stop>
+            <stop offset="100%" stop-color="#4A3620"></stop>
+        </radialGradient>
+
+        <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF"></stop>
+            <stop offset="40%" stop-color="#F5EBE1"></stop>
+            <stop offset="80%" stop-color="#D2B48C"></stop>
+            <stop offset="100%" stop-color="#A6855B"></stop>
+        </linearGradient>
+
+        <path id="sparkle" d="M 0 -16 C 0 -4 4 0 16 0 C 4 0 0 4 0 16 C 0 4 -4 0 -16 0 C -4 0 0 -4 0 -16 Z"></path>
+    </defs>
+
+    <use href="#sparkle" transform="translate(410, 110) scale(1.2) rotate(15)" fill="url(#accentGrad)" opacity="0.9"></use>
+    <use href="#sparkle" transform="translate(100, 390) scale(0.9) rotate(-10)" fill="url(#accentGrad)" opacity="0.7"></use>
+
+    <path d="M 64 144 L 64 64 L 144 64" fill="none" stroke="url(#accentGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M 368 64 L 448 64 L 448 144" fill="none" stroke="url(#accentGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M 448 368 L 448 448 L 368 448" fill="none" stroke="url(#accentGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M 144 448 L 64 448 L 64 368" fill="none" stroke="url(#accentGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <ellipse cx="256" cy="340" rx="140" ry="70" fill="url(#bodyGrad)"></ellipse>
+    <rect x="116" y="200" width="280" height="140" fill="url(#bodyGrad)"></rect>
+
+    <ellipse cx="256" cy="200" rx="140" ry="70" fill="url(#lensOuter)" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.5"></ellipse>
+    <ellipse cx="256" cy="200" rx="112" ry="56" fill="url(#lensInner)" stroke="#4A3620" stroke-width="1" stroke-opacity="0.3"></ellipse>
+    <ellipse cx="256" cy="200" rx="76" ry="38" fill="url(#lensDeep)" stroke="#1A1108" stroke-width="2" stroke-opacity="0.4"></ellipse>
+    <ellipse cx="256" cy="200" rx="44" ry="22" fill="url(#irisGrad)"></ellipse>
+
+    <path d="M 230 185 L 282 185 L 295 200 L 282 215 L 230 215 L 217 200 Z" fill="none" stroke="#D2B48C" stroke-width="1" opacity="0.15"></path>
+    <use href="#sparkle" transform="translate(256, 200) scale(0.65)" fill="#FFFFFF"></use>
+
+    <g opacity="0.15">
+        <ellipse cx="206" cy="180" rx="40" ry="18" fill="#FFFFFF" transform="rotate(-25 206 180)"></ellipse>
+        <ellipse cx="306" cy="220" rx="15" ry="7" fill="#FFFFFF" transform="rotate(-25 306 220)"></ellipse>
+    </g>
+
+    <path d="M 120 200 A 136 66 0 0 1 392 200" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.4"></path>
+</svg>

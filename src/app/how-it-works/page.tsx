@@ -42,11 +42,11 @@ export default function HowItWorks() {
         <section className="mb-24">
           <h2 className="text-[10px] uppercase tracking-[0.3em] text-accent mb-4 font-bold">The Concept</h2>
           <h1 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter max-w-2xl leading-[1.1]">
-            Curated Studio Lighting <br/>
-            <span className="text-textMuted font-light">for AI-Native Operators.</span>
+            Studio-Grade Lighting <br/>
+            <span className="text-textMuted font-light">for Food & Beverage Brands.</span>
           </h1>
           <p className="text-textMuted text-lg leading-relaxed max-w-3xl font-light">
-            ProductPhoto.pro is a curated library of premium AI product photography prompts for **DTC & e-commerce brands**. We capture high-end architectural shadows, organic wellness lighting, and aggressive hard-flash aesthetics. Members unlock the exact prompt and lighting geometry used to build every shot.
+            ProductPhoto.pro provides the reference images and prompt logic to replicate high-end product photography. Instead of a $5,000 shoot, you use our <strong>StyleVault</strong> images as visual anchors in Gemini. This locks in the lighting, shadows, and textures used by top-tier DTC brands for your own products.
           </p>
         </section>
 
@@ -141,7 +141,7 @@ export default function HowItWorks() {
         {/* Contact */}
         <section className="text-center p-16 rounded-[40px] bg-surface border border-borderSubtle shadow-2xl">
           <h2 className="text-2xl font-bold mb-4 tracking-tight">Need to get in touch?</h2>
-          <p className="text-textMuted mb-8 font-light italic">Have questions about a specific style or custom enterprise prompt engineering?</p>
+          <p className="text-textMuted mb-8 font-light italic">Have questions about a style or need a custom prompt for your brand?</p>
           <div className="flex items-center justify-center gap-3 group cursor-pointer">
             <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-background transition-all">
               <Mail size={18} />

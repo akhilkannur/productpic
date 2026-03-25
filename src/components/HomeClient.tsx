@@ -111,7 +111,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
               <Sparkles className="text-accent shrink-0 mt-0.5" size={16} />
               <p className="text-[11px] md:text-xs leading-relaxed text-textMuted font-medium italic">
                 <span className="text-accent font-bold uppercase tracking-tighter not-italic block mb-0.5 md:mb-1">Expert Tip:</span>
-                Styles are <span className="text-textMain font-bold">Interchangeable</span>. A "Jar" prompt works flawlessly for Bottles or Cans.
+                Most styles are <span className="text-textMain font-bold">Interchangeable</span>. A "Jar" prompt usually works for Bottles or Cans too.
               </p>
             </div>
           </div>
