@@ -141,7 +141,7 @@ export default function HowItWorks() {
         {/* Contact */}
         <section className="text-center p-16 rounded-[40px] bg-surface border border-borderSubtle shadow-2xl">
           <h2 className="text-2xl font-bold mb-4 tracking-tight">Need to get in touch?</h2>
-          <p className="text-textMuted mb-8 font-light italic">Have questions about a specific pillar or custom enterprise prompt engineering?</p>
+          <p className="text-textMuted mb-8 font-light italic">Have questions about a specific style or custom enterprise prompt engineering?</p>
           <div className="flex items-center justify-center gap-3 group cursor-pointer">
             <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:text-background transition-all">
               <Mail size={18} />

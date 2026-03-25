@@ -1168,5 +1168,35 @@
     "beforeImage": "/library/dichroic-glass-bag/before.png",
     "afterImage": "/library/dichroic-glass-bag/after.png",
     "isFree": false
+  },
+  {
+    "id": "mediterranean-star-filter-jar",
+    "name": "Mediterranean Star-Filter Jar",
+    "pillar": "The Monolith (DTC Heritage)",
+    "category": "Jars/Spreads",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[COMPOSITION]: Product centered on a Travertine stone ledge.\n[LIGHTING]: High-contrast, directional midday Mediterranean sun.\n[SHADOW]: Sharp, defined architectural shadows.\n[EFFECT]: Subtle 4-point star filters on glass highlights to create a vintage 'twinkle'.\n[BACKGROUND]: A warm sand matte background (#C2B280).\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: 1970s Italian resort, high-fashion editorial.",
+    "beforeImage": "/library/mediterranean-star-filter-jar/before.png",
+    "afterImage": "/library/mediterranean-star-filter-jar/after.png",
+    "isFree": true
+  },
+  {
+    "id": "hyper-sweat-neon-can",
+    "name": "Hyper-Sweat Neon Can",
+    "pillar": "The Chroma (High-Energy)",
+    "category": "Beverages/Cans",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Vertical strip-box highlights on both sides to define the cylinder.\n[EFFECT]: Hyper-defined, spherical glycerin 'sweat' droplets with a subtle rim-lit glow.\n[BACKGROUND]: Solid monochromatic neon pink background matching the can.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Brat-coded, high-energy refreshment.",
+    "beforeImage": "/library/hyper-sweat-neon-can/before.png",
+    "afterImage": "/library/hyper-sweat-neon-can/after.png",
+    "isFree": true
+  },
+  {
+    "id": "crumbs-on-linen-pouch",
+    "name": "Crumbs on Linen Pouch",
+    "pillar": "The Botanical (Lived-In)",
+    "category": "Snacks/Pouches",
+    "prompt": "Using the uploaded product photo, generate a high-resolution mockup with these exact specifications:\n[LIGHTING]: Side-lit natural window light.\n[COMPOSITION]: The product is lying on its side amidst 'hero crumbs' and torn bread on a textured linen napkin.\n[BACKGROUND]: Messy, lived-in kitchen countertop with oil drips and sea salt flakes.\n[PRODUCT INTEGRITY]: STRICTLY PRESERVE original surface.\n[MOOD]: Perfectly imperfect, approachable luxury.",
+    "beforeImage": "/library/crumbs-on-linen-pouch/before.png",
+    "afterImage": "/library/crumbs-on-linen-pouch/after.png",
+    "isFree": true
   }
 ]

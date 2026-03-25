@@ -1,61 +1,12 @@
-import { createClient } from "@supabase/supabase-js";
 import Header from "@/components/Header";
 import HomeClient from "@/components/HomeClient";
+import { getStyles, disperseStyles } from "@/lib/styles";
 
 export const revalidate = 60;
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
-async function getStyles() {
-  const supabase = createClient(supabaseUrl, supabaseAnonKey);
-  const { data, error } = await supabase
-    .from("styles")
-    .select("*")
-    .order("created_at", { ascending: true });
-
-  if (error) {
-    console.error("Error fetching styles:", error);
-    return [];
-  }
-
-  const mappedStyles = data.map((item: any) => ({
-    id: item.id,
-    name: item.name,
-    pillar: item.pillar,
-    category: item.category,
-    prompt: item.prompt,
-    beforeImage: item.before_image,
-    afterImage: item.after_image,
-    isFree: item.is_free,
-  }));
-
-  const freeStyles = mappedStyles.filter((s: any) => s.isFree);
-  const paidStyles = mappedStyles.filter((s: any) => !s.isFree);
-
-  // Disperse free styles every ~6 items
-  const dispersedStyles: any[] = [];
-  const totalCount = mappedStyles.length;
-  // Use a fixed interval or calculate based on current density
-  const freeInterval = Math.max(2, Math.floor(totalCount / (freeStyles.length || 1)));
-  
-  let freeIdx = 0;
-  let paidIdx = 0;
-
-  for (let i = 0; i < totalCount; i++) {
-    // If we have free styles and hit the interval, or we are out of paid styles
-    if ((i % freeInterval === 0 && freeIdx < freeStyles.length) || (paidIdx >= paidStyles.length && freeIdx < freeStyles.length)) {
-      dispersedStyles.push(freeStyles[freeIdx++]);
-    } else if (paidIdx < paidStyles.length) {
-      dispersedStyles.push(paidStyles[paidIdx++]);
-    }
-  }
-
-  return dispersedStyles;
-}
-
 export default async function Home() {
-  const styles = await getStyles();
+  const allStyles = await getStyles();
+  const styles = disperseStyles(allStyles);
 
   return (
     <div className="font-sans antialiased min-h-screen flex flex-col selection:bg-accent selection:text-black w-full h-full bg-background">
