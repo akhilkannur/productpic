@@ -57,14 +57,14 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
   return (
     <>
       {/* Filter Bar */}
-      <div className="sticky top-24 z-40 bg-background border-b border-borderSubtle w-full">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row md:items-center justify-between gap-8">
+      <div className="sticky top-20 md:top-24 z-40 bg-background border-b border-borderSubtle w-full">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-4 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
             {shapes.map((shape) => (
               <button
                 key={shape}
                 onClick={() => setShapeFilter(shape)}
-                className={`shrink-0 px-6 py-2 border text-[11px] font-bold uppercase tracking-widest transition-all whitespace-nowrap ${
+                className={`shrink-0 px-4 md:px-6 py-1.5 md:py-2 border text-[10px] md:text-[11px] font-bold uppercase tracking-widest transition-all whitespace-nowrap ${
                   shapeFilter === shape
                     ? "border-white bg-white text-black"
                     : "border-borderSubtle hover:border-white/40 text-textMuted hover:text-white"
@@ -75,30 +75,32 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
             ))}
           </div>
           
-          <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.2em] text-textMuted">
+          <div className="flex items-center gap-3 md:gap-4 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-textMuted">
             <Sparkles size={14} className="text-white" />
-            <span>Styles are interchangeable</span>
+            <span className="truncate">Most styles are interchangeable</span>
           </div>
         </div>
       </div>
 
       {/* Main Grid Content */}
-      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-16 w-full flex-grow">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-px gap-y-px bg-borderSubtle border border-borderSubtle">
+      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 md:py-16 w-full flex-grow">
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-8 space-y-4 md:space-y-8">
           {filteredStyles.map((style, idx) => (
             <Link
               key={style.id}
               href={`/ai-product-photo-prompts/${getCategorySlug(style.category)}/${style.id}`}
               scroll={false}
-              className="bg-background group relative"
+              className="bg-background group relative block break-inside-avoid"
             >
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: idx * 0.01 }}
-                className="flex flex-col h-full"
+                className="flex flex-col h-full border border-borderSubtle"
               >
-                <div className="relative aspect-[4/5] overflow-hidden transition-all duration-700">
+                <div className={`relative overflow-hidden transition-all duration-700 ${
+                  idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[1/1]" : "aspect-[4/5]"
+                }`}>
                   <Image 
                     src={style.afterImage} 
                     alt={`${style.name}`}
@@ -107,20 +109,20 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                   {style.isFree && (
-                    <div className="absolute top-6 right-6 z-30">
-                      <span className="bg-white text-black text-[9px] px-3 py-1 font-black uppercase tracking-[0.2em]">Free</span>
+                    <div className="absolute top-4 md:top-6 right-4 md:right-6 z-30">
+                      <span className="bg-white text-black text-[9px] px-2 md:px-3 py-1 font-black uppercase tracking-[0.2em]">Free</span>
                     </div>
                   )}
                 </div>
 
-                <div className="p-8 space-y-4 border-t border-borderSubtle group-hover:bg-white transition-colors duration-300">
+                <div className="p-6 md:p-8 space-y-3 md:space-y-4 border-t border-borderSubtle group-hover:bg-white transition-colors duration-300">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-sm font-bold leading-tight group-hover:text-black transition-colors uppercase tracking-tight">
+                    <h3 className="text-xs md:text-sm font-bold leading-tight group-hover:text-black transition-colors uppercase tracking-tight">
                       {style.name}
                     </h3>
                     <ArrowUpRight size={18} className="text-textMuted group-hover:text-black transition-colors" />
                   </div>
-                  <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.2em] text-textMuted group-hover:text-black/60 transition-colors">
+                  <div className="flex items-center justify-between text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-textMuted group-hover:text-black/60 transition-colors">
                     <span>{style.category}</span>
                     {!style.isFree && hasAccess && (
                       <span className="text-white group-hover:text-black">Unlocked</span>

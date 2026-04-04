@@ -8,25 +8,25 @@ export default function HowItWorks() {
     {
       id: "01",
       title: "OPEN GEMINI",
-      description: "Use Gemini 3.1 Flash (Nano Banana 2) or Gemini 3 Pro (Nano Banana Pro) for multimodal capabilities.",
+      description: "Use Gemini 1.5 Flash or Pro. This is the AI model that generates the images.",
       icon: <Camera size={20} />
     },
     {
       id: "02",
       title: "COPY PROMPT",
-      description: "Copy the technical prompt anchor from our library to lock in high-end shadow and lighting physics.",
+      description: "Copy a prompt from our library. These are tuned for studio-quality lighting.",
       icon: <Layers size={20} />
     },
     {
       id: "03",
-      title: "UPLOAD ASSET",
-      description: "Upload your raw product photo + our style reference. This acts as a visual 'multimodal' guide for the model.",
+      title: "UPLOAD PHOTO",
+      description: "Upload your product photo along with our reference image to guide the AI.",
       icon: <Box size={20} />
     },
     {
       id: "04",
-      title: "ITERATE",
-      description: "The result is a studio-grade render. Use the model's native editing tools to refine textures or swap backgrounds.",
+      title: "GENERATE",
+      description: "The AI will combine your product with our lighting style. Refine as needed.",
       icon: <RefreshCcw size={20} />
     }
   ];
@@ -38,13 +38,13 @@ export default function HowItWorks() {
       <main className="max-w-[1200px] mx-auto px-6 py-24">
         {/* Concept */}
         <section className="mb-32">
-          <h2 className="text-[10px] uppercase tracking-[0.4em] text-textMuted mb-6 font-bold italic">The Methodology</h2>
+          <h2 className="text-[10px] uppercase tracking-[0.4em] text-textMuted mb-6 font-bold italic">The Process</h2>
           <h1 className="text-5xl md:text-8xl font-bold mb-12 tracking-[-0.04em] leading-[0.9] uppercase">
-            Multimodal <br/>
-            <span className="text-textMuted italic">Visual Anchors.</span>
+            HOW IT <br/>
+            <span className="text-textMuted italic">WORKS.</span>
           </h1>
           <p className="text-textMuted text-lg md:text-2xl leading-tight max-w-2xl font-medium tracking-tight uppercase">
-            ProductPhoto.pro is a technical library of <strong>Visual Anchors</strong>. Curated images and prompt logic that help marketers replicate complex studio physics in seconds.
+            ProductPhoto.pro provides the prompts and reference images you need to create professional product photos using AI. No expensive gear or studios required.
           </p>
         </section>
 
@@ -68,26 +68,26 @@ export default function HowItWorks() {
           </div>
         </section>
 
-        {/* Technical Principles */}
+        {/* Things to know */}
         <section className="mb-48 border-t border-borderSubtle pt-24">
-          <h2 className="text-[10px] uppercase tracking-[0.4em] text-textMuted mb-16 font-bold italic">Technical Principles</h2>
+          <h2 className="text-[10px] uppercase tracking-[0.4em] text-textMuted mb-16 font-bold italic">Important Details</h2>
           
           <div className="grid md:grid-cols-2 gap-24">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold tracking-tighter flex items-center gap-4 uppercase">
-                <Sparkles size={20} /> Model Fidelity
+                <Sparkles size={20} /> AI Models
               </h3>
               <p className="text-textMuted text-sm uppercase tracking-widest leading-relaxed">
-                Google updates their models frequently. Our prompts are tuned specifically for the <strong>Nano Banana</strong> architecture to ensure caustic rim lighting and texture accuracy.
+                Our prompts work best with <strong>Google Gemini</strong>. They are designed to trigger high-end lighting and accurate textures for your products.
               </p>
             </div>
 
             <div className="space-y-6">
               <h3 className="text-2xl font-bold tracking-tighter flex items-center gap-4 uppercase">
-                <Zap size={20} /> Probabilistic Lighting
+                <Zap size={20} /> Consistency
               </h3>
               <p className="text-textMuted text-sm uppercase tracking-widest leading-relaxed">
-                AI results are probabilistic. The library acts as the &quot;target aesthetic.&quot; Use the anchors to lock in the lighting logic while allowing the model to adapt to your specific product shape.
+                AI results can change every time you run a prompt. Use our reference images as a guide to keep your brand looking consistent across all photos.
               </p>
             </div>
           </div>
@@ -95,13 +95,13 @@ export default function HowItWorks() {
 
         {/* Contact/Support */}
         <section className="p-16 border border-white text-center space-y-8 bg-white text-black">
-          <h2 className="text-3xl font-bold tracking-tighter uppercase">Support & Custom Integration</h2>
+          <h2 className="text-3xl font-bold tracking-tighter uppercase">Need Help?</h2>
           <p className="text-sm max-w-sm mx-auto uppercase tracking-widest leading-relaxed font-bold">
-            Need custom prompt tuning or bulk multimodal integration for your enterprise brand?
+            Want custom prompts for your brand or help setting up your AI workflow?
           </p>
           <div className="flex items-center justify-center">
              <a href="mailto:AKHIL@LISNAGENCY.ONLINE" className="flex items-center gap-4 text-xl font-bold uppercase tracking-tight group">
-                AKHIL@LISNAGENCY.ONLINE
+                GET IN TOUCH
                 <ArrowRight className="group-hover:translate-x-2 transition-transform" />
              </a>
           </div>

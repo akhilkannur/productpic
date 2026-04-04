@@ -14,20 +14,20 @@ export default async function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-24 pb-16 w-full border-b border-borderSubtle">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-16 md:pt-24 pb-16 w-full border-b border-borderSubtle">
         <div className="max-w-5xl">
-          <h1 className="text-5xl sm:text-7xl md:text-[12rem] font-bold tracking-[-0.06em] mb-16 leading-[0.8] uppercase">
-            Better<br />
-            Product<br />
-            Photos<span className="text-textMuted">.</span>
+          <h1 className="text-4xl sm:text-7xl md:text-[9rem] font-bold tracking-[-0.06em] mb-12 md:mb-16 leading-[0.85] uppercase">
+            Prompts for<br />
+            Studio Quality<br />
+            Product Photos<span className="text-textMuted">.</span>
           </h1>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <p className="text-textMuted text-lg md:text-2xl leading-tight max-w-xl font-medium tracking-tight uppercase">
-              100+ Studio-tuned AI prompts for food & beverage photorealism. Built for marketers & founders.
+              100+ professional AI prompts for high-end food & beverage product photos. Built for marketers & founders.
             </p>
             <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.2em] text-textMuted">
               <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-              Library Updated April 2026
+              Last Updated April 2026
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default async function Home() {
               <span className="font-bold text-2xl tracking-tighter uppercase">ProductPhoto<span className="opacity-50">.pro</span></span>
             </div>
             <p className="text-textMuted text-xs max-w-xs leading-relaxed uppercase tracking-widest">
-              A curated library of technical prompt logic for multimodal image models.
+              A curated library of professional AI prompts for high-end product photos.
             </p>
           </div>
           

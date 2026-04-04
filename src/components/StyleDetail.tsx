@@ -51,7 +51,7 @@ export default function StyleDetail({ style, onClose }: StyleDetailProps) {
           <Lock className="mx-auto mb-6 text-white" size={32} />
           <h3 className="font-bold mb-2 text-white tracking-tight text-xl uppercase">LIBRARY ACCESS</h3>
           <p className="text-xs text-textMuted mb-8 uppercase tracking-widest leading-relaxed">
-            Unlock lifetime access to all 100+ technical prompt anchors.
+            Unlock lifetime access to all 100+ professional AI prompts.
           </p>
           <a 
             href="https://checkout.dodopayments.com/buy/pdt_0Nb6DxNGX1dZxvAqv6u9o?quantity=1"
@@ -98,11 +98,11 @@ export default function StyleDetail({ style, onClose }: StyleDetailProps) {
 
       {/* Content Section */}
       <div className="md:w-1/2 flex flex-col bg-background">
-        <div className="hidden md:flex justify-between items-start p-12 border-b border-borderSubtle">
+        <div className="hidden md:flex justify-between items-start p-8 md:p-12 border-b border-borderSubtle">
           <div>
-            <h2 className="text-4xl font-bold tracking-tighter leading-none mb-4 uppercase">{style.name}</h2>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tighter leading-none mb-4 uppercase">{style.name}</h2>
             <div className="flex gap-4 text-[10px] font-bold uppercase tracking-[0.2em] text-textMuted">
-              <span>CAT: {style.category}</span>
+              <span>CATEGORY: {style.category}</span>
               <span>TYPE: {style.pillar}</span>
             </div>
           </div>
@@ -117,9 +117,9 @@ export default function StyleDetail({ style, onClose }: StyleDetailProps) {
         </div>
 
         <div className="flex-grow flex flex-col min-h-0">
-          <div className="p-12 relative flex-grow flex flex-col">
-            <div className="flex justify-between items-center mb-8">
-              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-textMuted">Technical Prompt</span>
+          <div className="p-6 md:p-12 relative flex-grow flex flex-col">
+            <div className="flex justify-between items-center mb-6 md:mb-8">
+              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-textMuted">AI Prompt</span>
               {canViewPrompt(style) && (
                 <button 
                   onClick={() => handleCopy(style.prompt)}
@@ -136,12 +136,12 @@ export default function StyleDetail({ style, onClose }: StyleDetailProps) {
             </div>
 
             {canViewPrompt(style) && (
-              <div className="mt-12 pt-8 border-t border-borderSubtle">
+              <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-borderSubtle">
                 <div className="flex items-start gap-4">
                   <Sparkles size={16} className="text-white mt-1 shrink-0" />
                   <div className="text-[10px] leading-relaxed text-textMuted uppercase tracking-widest font-bold">
-                    <span className="text-white block mb-1">Anchor Methodology:</span>
-                    Use this photo as a **Multimodal Anchor** in Gemini or an **--sref** in Midjourney to replicate these specific caustic physics.
+                    <span className="text-white block mb-1">How to use:</span>
+                    Upload this photo as a reference in Gemini or Midjourney to get these same lighting and shadow effects.
                   </div>
                 </div>
               </div>
