@@ -27,7 +27,7 @@ export default async function Home() {
             </p>
             <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.2em] text-textMuted">
               <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-              Library Updated March 2026
+              Library Updated April 2026
             </div>
           </div>
         </div>
