@@ -1,25 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import { Lock, Sparkles } from "lucide-react";
 import { Style } from "@/lib/styles";
 import { getCategorySlug } from "@/lib/utils";
-import StyleDetail from "./StyleDetail";
 
 export default function HomeClient({ styles }: { styles: Style[] }) {
   const [shapeFilter, setShapeFilter] = useState("All");
-  const [isSignedIn, setIsSignedIn] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
 
   useEffect(() => {
     async function checkAccess() {
       const { data: { session } } = await supabase.auth.getSession();
       if (session?.user) {
-        setIsSignedIn(true);
         const { data: profile } = await supabase
           .from('profiles')
           .select('has_access')
@@ -31,7 +28,6 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
     checkAccess();
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setIsSignedIn(!!session?.user);
       if (!session?.user) {
         setHasAccess(false);
       }
@@ -61,7 +57,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
   // Can the user see this prompt?
   const canViewPrompt = (style: Style) => {
     if (hasAccess) return true;
-    if (style.isFree && isSignedIn) return true;
+    if (style.isFree) return true;
     return false;
   };
 
@@ -111,7 +107,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
               <Sparkles className="text-accent shrink-0 mt-0.5" size={16} />
               <p className="text-[11px] md:text-xs leading-relaxed text-textMuted font-medium italic">
                 <span className="text-accent font-bold uppercase tracking-tighter not-italic block mb-0.5 md:mb-1">Expert Tip:</span>
-                Most styles are <span className="text-textMain font-bold">Interchangeable</span>. A "Jar" prompt usually works for Bottles or Cans too.
+                Most styles are <span className="text-textMain font-bold">Interchangeable</span>. A &quot;Jar&quot; prompt usually works for Bottles or Cans too.
               </p>
             </div>
           </div>

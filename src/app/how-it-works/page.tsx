@@ -1,7 +1,6 @@
 "use client";
 
 import Header from "@/components/Header";
-import { motion } from "framer-motion";
 import { Sparkles, Zap, Mail, Camera, Box, Layers, RefreshCcw } from "lucide-react";
 
 export default function HowItWorks() {
@@ -104,7 +103,7 @@ export default function HowItWorks() {
                 <Zap size={18} className="text-accent" /> Inspiration, Not Duplication
               </h3>
               <p className="text-textMuted text-sm font-light leading-relaxed">
-                AI results are probabilistic. The images on this site are the "target aesthetic." While your result will follow the lighting logic, it is inspired by, not a direct copy of, the reference.
+                AI results are probabilistic. The images on this site are the &quot;target aesthetic.&quot; While your result will follow the lighting logic, it is inspired by, not a direct copy of, the reference.
               </p>
             </div>
 
@@ -117,10 +116,9 @@ export default function HowItWorks() {
                 <br /><br />
                 • Free Users: ~20 images/day with Nano Banana 2.<br />
                 • AI Pro ($19.99/mo): 50-1,000 images/day.<br /><br />
-                If quality suddenly drops or images become "flat," you have likely hit your daily limit.
+                If quality suddenly drops or images become &quot;flat,&quot; you have likely hit your daily limit.
               </p>
             </div>
-
             <div>
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                 <Camera size={18} className="text-accent" /> Source Product Photos

@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Lock, Copy, Check, X, Sparkles, LogIn } from "lucide-react";
+import { Lock, Copy, Check, X, Sparkles } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { Style } from "@/lib/styles";
 
@@ -14,14 +13,12 @@ interface StyleDetailProps {
 
 export default function StyleDetail({ style, onClose }: StyleDetailProps) {
   const [copied, setCopied] = useState(false);
-  const [isSignedIn, setIsSignedIn] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
 
   useEffect(() => {
     async function checkAccess() {
       const { data: { session } } = await supabase.auth.getSession();
       if (session?.user) {
-        setIsSignedIn(true);
         const { data: profile } = await supabase
           .from('profiles')
           .select('has_access')
@@ -41,30 +38,12 @@ export default function StyleDetail({ style, onClose }: StyleDetailProps) {
 
   const canViewPrompt = (style: Style) => {
     if (hasAccess) return true;
-    if (style.isFree && isSignedIn) return true;
+    if (style.isFree) return true;
     return false;
   };
 
   const renderLockOverlay = (style: Style) => {
     if (canViewPrompt(style)) return null;
-
-    if (style.isFree && !isSignedIn) {
-      return (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-md z-40">
-          <div className="text-center p-8 bg-surface border border-white/10 rounded-2xl shadow-2xl">
-            <LogIn className="mx-auto mb-4 text-accent" size={28} />
-            <p className="font-bold mb-1 text-textMain tracking-tight text-lg">FREE PROMPT</p>
-            <p className="text-sm text-textMuted mb-6 font-medium">Sign up to unlock prompts.</p>
-            <Link
-              href="https://www.productphoto.pro/signin"
-              className="block w-full bg-accent text-background text-center font-bold py-3 px-8 rounded-xl hover:bg-accent-hover transition-all"
-            >
-              Sign Up Free
-            </Link>
-          </div>
-        </div>
-      );
-    }
 
     return (
       <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-md z-40">

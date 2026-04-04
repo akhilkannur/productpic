@@ -14,6 +14,18 @@ export interface Style {
   isFree: boolean;
 }
 
+interface StyleRow {
+  id: string;
+  name: string;
+  pillar: string;
+  category: string;
+  prompt: string;
+  before_image: string;
+  after_image: string;
+  is_free: boolean;
+  created_at?: string;
+}
+
 export async function getStyles() {
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   const { data, error } = await supabase
@@ -26,7 +38,7 @@ export async function getStyles() {
     return [];
   }
 
-  const mappedStyles: Style[] = data.map((item: any) => ({
+  const mappedStyles: Style[] = (data as StyleRow[]).map((item) => ({
     id: item.id,
     name: item.name,
     pillar: item.pillar,

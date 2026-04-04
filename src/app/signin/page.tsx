@@ -43,7 +43,7 @@ export default function SignIn() {
         </h1>
         
         <p className="text-textMuted text-lg mb-10 font-light max-w-sm mx-auto">
-          We'll send a secure magic link to your email to sign you in or create an account instantly. No passwords required.
+          We&apos;ll send a secure magic link to your email to sign you in or create an account instantly. No passwords required.
         </p>
 
         {success ? (
@@ -53,7 +53,7 @@ export default function SignIn() {
             </div>
             <h3 className="text-xl font-bold mb-2 text-textMain">Check your inbox.</h3>
             <p className="text-textMuted text-sm font-light">
-              We've sent a magic link to <span className="text-accent font-medium">{email}</span>. Click the link to log in.
+              We&apos;ve sent a magic link to <span className="text-accent font-medium">{email}</span>. Click the link to log in.
             </p>
           </div>
         ) : (
