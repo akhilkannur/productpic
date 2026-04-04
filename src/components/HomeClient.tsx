@@ -84,7 +84,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
 
       {/* Main Grid Content */}
       <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-6 md:py-12 w-full flex-grow">
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8">
+        <div className="columns-1 md:columns-2 gap-12 space-y-12">
           {filteredStyles.map((style, idx) => (
             <Link
               key={style.id}
@@ -98,20 +98,13 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                 transition={{ delay: idx * 0.01 }}
                 className="flex flex-col h-full border border-borderSubtle"
               >
-                <div className={`relative overflow-hidden transition-all duration-700 ${
-                  idx % 6 === 0 ? "aspect-[3/4]" : 
-                  idx % 6 === 1 ? "aspect-[4/5]" : 
-                  idx % 6 === 2 ? "aspect-[1/1]" : 
-                  idx % 6 === 3 ? "aspect-[2/3]" :
-                  idx % 6 === 4 ? "aspect-[3/2]" :
-                  "aspect-[4/3]"
-                }`}>
+                <div className="relative overflow-hidden transition-all duration-700 aspect-[3/2]">
                   <Image 
                     src={style.afterImage} 
                     alt={`${style.name}`}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    priority={idx < 8}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                    priority={idx < 4}
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                   {style.isFree && (
@@ -121,14 +114,14 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                   )}
                 </div>
 
-                <div className="p-8 space-y-4 border-t border-borderSubtle group-hover:bg-white transition-colors duration-300">
+                <div className="p-6 md:p-8 space-y-3 border-t border-borderSubtle group-hover:bg-white transition-colors duration-300">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-sm font-bold leading-tight group-hover:text-black transition-colors uppercase tracking-tight">
+                    <h3 className="text-base md:text-xl font-bold leading-tight group-hover:text-black transition-colors uppercase tracking-tight">
                       {style.name}
                     </h3>
-                    <ArrowUpRight size={18} className="text-textMuted group-hover:text-black transition-colors" />
+                    <ArrowUpRight size={20} className="text-textMuted group-hover:text-black transition-colors" />
                   </div>
-                  <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.2em] text-textMuted group-hover:text-black/60 transition-colors">
+                  <div className="flex items-center justify-between text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-textMuted group-hover:text-black/60 transition-colors">
                     <span>{style.category}</span>
                     {!style.isFree && hasAccess && (
                       <span className="text-white group-hover:text-black">Unlocked</span>
