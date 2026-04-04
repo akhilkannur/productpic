@@ -14,21 +14,21 @@ export default async function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-12 md:pt-20 pb-16 w-full border-b border-borderSubtle">
-        <div className="max-w-5xl">
-          <h1 className="text-4xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-bold tracking-[-0.06em] mb-12 leading-[0.8] uppercase">
-            Prompts for<br />
-            Studio Quality<br />
-            Product Photos<span className="text-textMuted">.</span>
-          </h1>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <p className="text-textMuted text-lg md:text-2xl leading-tight max-w-xl font-medium tracking-tight uppercase">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-8 md:pt-12 pb-8 w-full border-b border-borderSubtle">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl sm:text-5xl md:text-[3.5rem] lg:text-[4.5rem] font-bold tracking-[-0.06em] mb-4 leading-[0.9] uppercase">
+              Prompts for<br />
+              Studio Quality<br />
+              Product Photos<span className="text-textMuted">.</span>
+            </h1>
+            <p className="text-textMuted text-sm md:text-base leading-tight max-w-md font-medium tracking-tight uppercase">
               100+ professional AI prompts for high-end food & beverage product photos. Built for marketers & founders.
             </p>
-            <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.2em] text-textMuted">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-              Last Updated April 2026
-            </div>
+          </div>
+          <div className="flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.2em] text-textMuted">
+            <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+            Last Updated April 2026
           </div>
         </div>
       </section>

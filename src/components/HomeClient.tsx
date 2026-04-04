@@ -57,8 +57,8 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
   return (
     <>
       {/* Filter Bar */}
-      <div className="sticky top-20 md:top-24 z-40 bg-background border-b border-borderSubtle w-full">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-4 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
+      <div className="sticky top-16 md:top-24 z-40 bg-background border-b border-borderSubtle w-full">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-3 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
             {shapes.map((shape) => (
               <button
@@ -83,7 +83,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
       </div>
 
       {/* Main Grid Content */}
-      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 md:py-16 w-full flex-grow">
+      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-6 md:py-12 w-full flex-grow">
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8">
           {filteredStyles.map((style, idx) => (
             <Link
@@ -99,13 +99,19 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                 className="flex flex-col h-full border border-borderSubtle"
               >
                 <div className={`relative overflow-hidden transition-all duration-700 ${
-                  idx % 2 === 0 ? "aspect-[3/4]" : "aspect-[4/5]"
+                  idx % 6 === 0 ? "aspect-[3/4]" : 
+                  idx % 6 === 1 ? "aspect-[4/5]" : 
+                  idx % 6 === 2 ? "aspect-[1/1]" : 
+                  idx % 6 === 3 ? "aspect-[2/3]" :
+                  idx % 6 === 4 ? "aspect-[3/2]" :
+                  "aspect-[4/3]"
                 }`}>
                   <Image 
                     src={style.afterImage} 
                     alt={`${style.name}`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    priority={idx < 8}
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                   {style.isFree && (
