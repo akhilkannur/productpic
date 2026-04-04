@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
-import { Lock, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { Style } from "@/lib/styles";
 import { getCategorySlug } from "@/lib/utils";
 
@@ -54,118 +54,78 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
     return matchesShape;
   });
 
-  // Can the user see this prompt?
-  const canViewPrompt = (style: Style) => {
-    if (hasAccess) return true;
-    if (style.isFree) return true;
-    return false;
-  };
-
-  // Card hover overlay
-  const renderCardOverlay = (style: Style) => {
-    if (canViewPrompt(style)) return null;
-
-    return (
-      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-20 backdrop-blur-[2px] pointer-events-none">
-        <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-          <Lock className="text-accent" size={24} />
-        </div>
-        <span className="text-white font-medium text-sm tracking-wide translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 ease-out">Unlock Prompt</span>
-      </div>
-    );
-  };
-
   return (
     <>
       {/* Filter Bar */}
-      <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-borderSubtle w-full">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-4 md:py-8 space-y-4 md:space-y-6">
-          <div className="flex flex-col xl:flex-row xl:items-start justify-between gap-4 md:gap-8">
-            <div className="flex flex-col gap-4 md:gap-5 flex-grow overflow-hidden">
-              {/* Shape Filter */}
-              <div className="flex items-center gap-3 md:gap-4 overflow-x-auto pb-1 scrollbar-hide">
-                <span className="shrink-0 text-[10px] md:text-[11px] font-bold tracking-widest uppercase text-textMuted mr-1 md:mr-2">Shape:</span>
-                {shapes.map((shape) => (
-                  <button
-                    key={shape}
-                    onClick={() => setShapeFilter(shape)}
-                    className={`shrink-0 px-4 md:px-5 py-1.5 md:py-2 rounded-full border text-xs transition-all whitespace-nowrap ${
-                      shapeFilter === shape
-                        ? "border-accent bg-accent text-background font-semibold shadow-[0_0_15px_rgba(210,180,140,0.2)]"
-                        : "border-borderSubtle hover:border-accent/40 hover:bg-surface text-textMuted hover:text-textMain font-medium"
-                    }`}
-                  >
-                    {shape === "All" ? "All Shapes" : shape}
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            {/* Interchangeability Note */}
-            <div className="shrink-0 flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl md:rounded-2xl bg-accent/5 border border-accent/10 max-w-sm relative group overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-full bg-accent opacity-50" />
-              <Sparkles className="text-accent shrink-0 mt-0.5" size={16} />
-              <p className="text-[11px] md:text-xs leading-relaxed text-textMuted font-medium italic">
-                <span className="text-accent font-bold uppercase tracking-tighter not-italic block mb-0.5 md:mb-1">Expert Tip:</span>
-                Most styles are <span className="text-textMain font-bold">Interchangeable</span>. A &quot;Jar&quot; prompt usually works for Bottles or Cans too.
-              </p>
-            </div>
+      <div className="sticky top-24 z-40 bg-background border-b border-borderSubtle w-full">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
+            {shapes.map((shape) => (
+              <button
+                key={shape}
+                onClick={() => setShapeFilter(shape)}
+                className={`shrink-0 px-6 py-2 border text-[11px] font-bold uppercase tracking-widest transition-all whitespace-nowrap ${
+                  shapeFilter === shape
+                    ? "border-white bg-white text-black"
+                    : "border-borderSubtle hover:border-white/40 text-textMuted hover:text-white"
+                }`}
+              >
+                {shape}
+              </button>
+            ))}
+          </div>
+          
+          <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.2em] text-textMuted">
+            <Sparkles size={14} className="text-white" />
+            <span>Styles are interchangeable</span>
           </div>
         </div>
       </div>
 
       {/* Main Grid Content */}
-      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 md:py-12 w-full flex-grow">
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-8 space-y-4 md:space-y-8">
+      <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-16 w-full flex-grow">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-px gap-y-px bg-borderSubtle border border-borderSubtle">
           {filteredStyles.map((style, idx) => (
             <Link
               key={style.id}
               href={`/ai-product-photo-prompts/${getCategorySlug(style.category)}/${style.id}`}
               scroll={false}
+              className="bg-background group relative"
             >
               <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: idx * 0.02 }}
-                className="group relative style-card rounded-2xl overflow-hidden cursor-pointer flex flex-col"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: idx * 0.01 }}
+                className="flex flex-col h-full"
               >
-                <div className="relative w-full overflow-hidden aspect-[3/4]">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center">
-                    <i className="ri-image-circle-line text-white/5 text-6xl"></i>
-                  </div>
-                  
+                <div className="relative aspect-[4/5] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
                   <Image 
                     src={style.afterImage} 
-                    alt={`${style.name} AI product photo prompt`}
+                    alt={`${style.name}`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    className="relative z-10 object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-                    priority={idx < 8}
-                    quality={90}
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
-
-                  {renderCardOverlay(style)}
-                  
                   {style.isFree && (
-                    <div className="absolute top-4 right-4 z-30">
-                      <span className="bg-green-500/20 text-green-400 text-[10px] px-3 py-1.5 rounded-lg border border-green-500/30 font-bold uppercase tracking-wider backdrop-blur-md">Free</span>
+                    <div className="absolute top-6 right-6 z-30">
+                      <span className="bg-white text-black text-[9px] px-3 py-1 font-black uppercase tracking-[0.2em]">Free</span>
                     </div>
                   )}
                 </div>
 
-                <div className="p-6 relative z-20 bg-surface border-t border-white/5">
-                  <div className="flex items-center justify-end mb-3">
-                    <i className="ri-arrow-right-up-line text-textMuted opacity-0 group-hover:opacity-100 group-hover:text-accent transition-all duration-300 -translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0"></i>
+                <div className="p-8 space-y-4 border-t border-borderSubtle group-hover:bg-white transition-colors duration-300">
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-sm font-bold leading-tight group-hover:text-black transition-colors uppercase tracking-tight">
+                      {style.name}
+                    </h3>
+                    <ArrowUpRight size={18} className="text-textMuted group-hover:text-black transition-colors" />
                   </div>
-                  <h3 className="text-textMain font-medium text-lg leading-snug group-hover:text-accent transition-colors duration-300">
-                    {style.name}
-                  </h3>
-                  {!style.isFree && hasAccess && (
-                    <div className="mt-3 flex items-center gap-2 text-[10px] text-accent uppercase font-bold tracking-widest bg-accent/5 w-fit px-3 py-1 rounded-full">
-                        <i className="ri-shield-check-line text-xs" /> Unlocked
-                    </div>
-                  )}
+                  <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.2em] text-textMuted group-hover:text-black/60 transition-colors">
+                    <span>{style.category}</span>
+                    {!style.isFree && hasAccess && (
+                      <span className="text-white group-hover:text-black">Unlocked</span>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             </Link>

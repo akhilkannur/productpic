@@ -3,20 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: #0A0A0A;
-  --foreground: #EDEDED;
-  --surface: #111111;
-  --accent: #D2B48C; /* Original Tan/Gold for luxury feel */
-  --accent-hover: #C1A37B;
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --surface: #000000;
+  --accent: #FFFFFF;
+  --accent-hover: #F0F0F0;
+  --border-subtle: #222222;
   --text-main: #FFFFFF;
-  --text-muted: #A0A0A0;
+  --text-muted: #707070;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tighter uppercase;
+  }
 }
 
 @layer utilities {
@@ -25,22 +32,18 @@ body {
   }
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+.tvs-border {
+  border: 1px solid var(--border-subtle);
 }
 
 .style-card {
-  background: var(--surface);
+  background: var(--background);
   border: 1px solid var(--border-subtle);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
 }
 
 .style-card:hover {
-  border-color: rgba(210, 180, 140, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: #444444;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -49,4 +52,9 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+::selection {
+  background: #FFFFFF;
+  color: #000000;
 }

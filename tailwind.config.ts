@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0a',
-        surface: '#121212',
+        background: '#000000',
+        surface: '#000000',
         accent: {
-          DEFAULT: 'rgb(210, 180, 140)',
-          hover: 'rgb(190, 160, 120)',
+          DEFAULT: '#ffffff',
+          hover: '#f0f0f0',
         },
-        textMain: '#f5f5f5',
-        textMuted: '#888888',
-        borderSubtle: 'rgba(255, 255, 255, 0.06)',
-        card: "#121212",
+        textMain: '#ffffff',
+        textMuted: '#707070',
+        borderSubtle: '#222222',
+        card: "#000000",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
