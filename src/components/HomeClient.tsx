@@ -84,7 +84,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
 
       {/* Main Grid Content */}
       <main className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8 md:py-16 w-full flex-grow">
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-8 space-y-4 md:space-y-8">
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8">
           {filteredStyles.map((style, idx) => (
             <Link
               key={style.id}
@@ -99,7 +99,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                 className="flex flex-col h-full border border-borderSubtle"
               >
                 <div className={`relative overflow-hidden transition-all duration-700 ${
-                  idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[1/1]" : "aspect-[4/5]"
+                  idx % 2 === 0 ? "aspect-[3/4]" : "aspect-[4/5]"
                 }`}>
                   <Image 
                     src={style.afterImage} 
@@ -115,14 +115,14 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                   )}
                 </div>
 
-                <div className="p-6 md:p-8 space-y-3 md:space-y-4 border-t border-borderSubtle group-hover:bg-white transition-colors duration-300">
+                <div className="p-8 space-y-4 border-t border-borderSubtle group-hover:bg-white transition-colors duration-300">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-xs md:text-sm font-bold leading-tight group-hover:text-black transition-colors uppercase tracking-tight">
+                    <h3 className="text-sm font-bold leading-tight group-hover:text-black transition-colors uppercase tracking-tight">
                       {style.name}
                     </h3>
                     <ArrowUpRight size={18} className="text-textMuted group-hover:text-black transition-colors" />
                   </div>
-                  <div className="flex items-center justify-between text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-textMuted group-hover:text-black/60 transition-colors">
+                  <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-[0.2em] text-textMuted group-hover:text-black/60 transition-colors">
                     <span>{style.category}</span>
                     {!style.isFree && hasAccess && (
                       <span className="text-white group-hover:text-black">Unlocked</span>

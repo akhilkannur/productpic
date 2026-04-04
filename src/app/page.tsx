@@ -14,9 +14,9 @@ export default async function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-16 md:pt-24 pb-16 w-full border-b border-borderSubtle">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-12 md:pt-20 pb-16 w-full border-b border-borderSubtle">
         <div className="max-w-5xl">
-          <h1 className="text-4xl sm:text-7xl md:text-[9rem] font-bold tracking-[-0.06em] mb-12 md:mb-16 leading-[0.85] uppercase">
+          <h1 className="text-4xl sm:text-7xl md:text-[6rem] lg:text-[8rem] font-bold tracking-[-0.06em] mb-12 leading-[0.8] uppercase">
             Prompts for<br />
             Studio Quality<br />
             Product Photos<span className="text-textMuted">.</span>
