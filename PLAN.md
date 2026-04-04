@@ -1,4 +1,4 @@
-# StyleVault: The $29 DTC "Aesthetic Pillar" Bundle
+# Technical Library: The $29 DTC "Aesthetic Pillar" Bundle
 
 ## The Concept
 A premium library of 50 "Scene-First" prompts for DTC Food & Beverage brands. We provide the "Master Dummy" assets and the "Pillar" prompts to create high-end, studio-grade product photography in seconds.
@@ -35,7 +35,7 @@ The "Dummies" used for all style transfers.
 ---
 
 ## The USP: "The Shadow-Catcher Guarantee"
-Unlike generic prompt libraries, StyleVault provides:
+Unlike generic prompt libraries, this library provides:
 1. **The Master Asset:** The exact geometry the AI was trained on.
 2. **The Prompt:** Tuned specifically for that geometry.
 3. **The Result:** Professional "Before/After" visual proof.

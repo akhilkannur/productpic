@@ -49,7 +49,7 @@ export default function StyleDetail({ style, onClose }: StyleDetailProps) {
       <div className="absolute inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm z-40 p-6">
         <div className="text-center p-12 bg-black border border-white/20 max-w-sm w-full">
           <Lock className="mx-auto mb-6 text-white" size={32} />
-          <h3 className="font-bold mb-2 text-white tracking-tight text-xl uppercase">VAULT ACCESS</h3>
+          <h3 className="font-bold mb-2 text-white tracking-tight text-xl uppercase">LIBRARY ACCESS</h3>
           <p className="text-xs text-textMuted mb-8 uppercase tracking-widest leading-relaxed">
             Unlock lifetime access to all 100+ technical prompt anchors.
           </p>

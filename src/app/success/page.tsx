@@ -17,12 +17,12 @@ export default function Success() {
         </h1>
         
         <p className="text-textMuted text-xl mb-12 font-light max-w-lg mx-auto">
-          Thank you for your purchase! Your account has been upgraded. You now have full access to the entire StyleVault.
+          Thank you for your purchase! Your account has been upgraded. You now have full access to the full library.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <Link href="/" className="bg-accent text-background px-8 py-4 rounded-xl text-sm font-bold hover:bg-accent-hover transition-all shadow-[0_0_20px_rgba(210,180,140,0.2)] flex items-center gap-2">
-            Explore the Vault <Sparkles size={16} />
+            Explore Library <Sparkles size={16} />
           </Link>
           <Link href="/how-it-works" className="px-8 py-4 rounded-xl border border-borderSubtle text-sm font-medium hover:bg-surface transition-all">
             Read the Guide

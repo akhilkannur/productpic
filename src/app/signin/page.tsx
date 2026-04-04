@@ -38,8 +38,8 @@ export default function SignIn() {
           <Lock className="text-accent" size={32} />
         </div>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter text-textMain">
-          Sign In / Up <span className="text-textMuted font-light">to Vault.</span>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter text-textMain uppercase">
+          Sign In <span className="text-textMuted font-light">to Library.</span>
         </h1>
         
         <p className="text-textMuted text-lg mb-10 font-light max-w-sm mx-auto">

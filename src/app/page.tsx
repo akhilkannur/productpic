@@ -16,17 +16,18 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-24 pb-16 w-full border-b border-borderSubtle">
         <div className="max-w-5xl">
-          <h1 className="text-5xl sm:text-7xl md:text-[10rem] font-bold tracking-[-0.04em] mb-12 leading-[0.85] uppercase">
+          <h1 className="text-5xl sm:text-7xl md:text-[12rem] font-bold tracking-[-0.06em] mb-16 leading-[0.8] uppercase">
+            Better<br />
             Product<br />
-            Photo<span className="text-textMuted">.pro</span>
+            Photos<span className="text-textMuted">.</span>
           </h1>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <p className="text-textMuted text-lg md:text-2xl leading-tight max-w-xl font-medium tracking-tight uppercase">
-              100+ Studio-tuned AI prompts for food & beverage photorealism. Built for designers & founders.
+              100+ Studio-tuned AI prompts for food & beverage photorealism. Built for marketers & founders.
             </p>
             <div className="flex items-center gap-4 text-[11px] font-bold uppercase tracking-[0.2em] text-textMuted">
               <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-              Vault Updated March 2026
+              Library Updated March 2026
             </div>
           </div>
         </div>

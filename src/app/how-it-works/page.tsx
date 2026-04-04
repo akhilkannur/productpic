@@ -44,7 +44,7 @@ export default function HowItWorks() {
             <span className="text-textMuted italic">Visual Anchors.</span>
           </h1>
           <p className="text-textMuted text-lg md:text-2xl leading-tight max-w-2xl font-medium tracking-tight uppercase">
-            ProductPhoto.pro is not a prompt generator. It is a technical library of <strong>Visual Anchors</strong>—curated images and prompt logic that guide multimodal models to replicate complex studio physics.
+            ProductPhoto.pro is a technical library of <strong>Visual Anchors</strong>. Curated images and prompt logic that help marketers replicate complex studio physics in seconds.
           </p>
         </section>
 
@@ -112,7 +112,7 @@ export default function HowItWorks() {
       <footer className="w-full border-t border-borderSubtle bg-background mt-auto">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-24 flex flex-col md:flex-row items-center justify-between gap-6 text-textMuted text-[10px] font-bold uppercase tracking-[0.3em]">
           <p>© 2026 ProductPhoto.pro</p>
-          <p>BUILT FOR DTC OPERATORS</p>
+          <p>BUILT FOR DTC MARKETERS</p>
         </div>
       </footer>
     </div>

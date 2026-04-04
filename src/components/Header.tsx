@@ -76,7 +76,7 @@ export default function Header() {
             target="_blank"
             className="border border-white px-8 py-3 text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all active:scale-95"
           >
-            Unlock Vault
+            Unlock Library
           </Link>
         </div>
       </div>

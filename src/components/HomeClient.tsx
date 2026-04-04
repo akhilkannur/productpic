@@ -98,7 +98,7 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                 transition={{ delay: idx * 0.01 }}
                 className="flex flex-col h-full"
               >
-                <div className="relative aspect-[4/5] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+                <div className="relative aspect-[4/5] overflow-hidden transition-all duration-700">
                   <Image 
                     src={style.afterImage} 
                     alt={`${style.name}`}

@@ -1,4 +1,4 @@
-# StyleVault: The $29 "Aesthetic Pillar" Bundle (50 Prompts)
+# Product Library: The $29 "Aesthetic Pillar" Bundle (50 Prompts)
 
 This bundle provides 50 studio-grade lighting and environment prompts for DTC Food & Beverage brands. It is designed for a **Mockup-First** workflow using clean/white-label products.
 
