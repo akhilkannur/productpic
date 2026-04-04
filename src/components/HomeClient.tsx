@@ -98,14 +98,14 @@ export default function HomeClient({ styles }: { styles: Style[] }) {
                 transition={{ delay: idx * 0.01 }}
                 className="flex flex-col h-full border border-borderSubtle"
               >
-                <div className="relative overflow-hidden transition-all duration-700 aspect-[3/2]">
+                <div className="relative overflow-hidden transition-all duration-700 bg-black/5">
                   <Image 
                     src={style.afterImage} 
                     alt={`${style.name}`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                    width={1000}
+                    height={1000}
                     priority={idx < 4}
-                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                    className="w-full h-auto transition-transform duration-1000 group-hover:scale-105"
                   />
                   {style.isFree && (
                     <div className="absolute top-4 md:top-6 right-4 md:right-6 z-30">
