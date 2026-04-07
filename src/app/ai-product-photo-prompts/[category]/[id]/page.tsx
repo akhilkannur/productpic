@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!style) return {};
 
-  const title = `${style.name} | AI Product Photo Prompt for ${style.category}`;
-  const description = `Get the exact AI prompt for this ${style.name} style. Professional photorealistic lighting for ${style.category} products. Works with Nano Banana and Midjourney.`;
+  const title = `AI Product Photo Prompt: ${style.name} for ${style.category}`;
+  const description = `The official AI product photography prompt for ${style.name} style. Optimized for ${style.category} products. 100% photorealistic results with Midjourney and Nano Banana.`;
 
   return {
     title,

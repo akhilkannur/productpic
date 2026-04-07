@@ -18,12 +18,12 @@ export default async function Home() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-3xl">
             <h1 className="text-3xl sm:text-5xl md:text-[3.5rem] lg:text-[4.5rem] font-bold tracking-[-0.06em] mb-4 leading-[0.9] uppercase">
-              Prompts for<br />
-              Studio Quality<br />
-              Product Photos<span className="text-textMuted">.</span>
+              Product<br />
+              Photography<br />
+              Prompts<span className="text-textMuted">.</span>
             </h1>
             <p className="text-textMuted text-sm md:text-base leading-tight max-w-md font-medium tracking-tight uppercase">
-              100+ professional AI prompts for high-end food & beverage product photos. Built for marketers & founders.
+              The Official AI Prompt Library for Studio-Quality Product Photos. 100+ Midjourney & Stable Diffusion Prompts for DTC Brands.
             </p>
           </div>
           <div className="flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.2em] text-textMuted">
@@ -46,7 +46,7 @@ export default async function Home() {
               <span className="font-bold text-2xl tracking-tighter uppercase">ProductPhoto<span className="opacity-50">.pro</span></span>
             </div>
             <p className="text-textMuted text-xs max-w-xs leading-relaxed uppercase tracking-widest">
-              A curated library of professional AI prompts for high-end product photos.
+              The Official Library of Professional AI Product Photography Prompts for High-End Brands.
             </p>
           </div>
           
